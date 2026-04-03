@@ -1,0 +1,67 @@
+import { Link } from "react-router-dom";
+import { BookOpen, Mail, Phone, MapPin } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="border-t border-border bg-card">
+      <div className="section-container py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div className="md:col-span-1">
+            <Link to="/" className="flex items-center gap-2 mb-4">
+              <BookOpen className="h-6 w-6 text-primary" />
+              <span className="font-display text-lg font-semibold">Daaru Al Qurane</span>
+            </Link>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Premium online Quran & Arabic education from Parakou, Benin — serving students worldwide.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-display text-sm font-semibold mb-4 text-foreground">Quick Links</h4>
+            <div className="flex flex-col gap-2">
+              {["Courses", "Store", "About", "Contact"].map((link) => (
+                <Link key={link} to={`/${link.toLowerCase()}`} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  {link}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-display text-sm font-semibold mb-4 text-foreground">Programs</h4>
+            <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+              <span>Quran Recitation</span>
+              <span>Arabic Language</span>
+              <span>Tajweed Mastery</span>
+              <span>Kids Program</span>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-display text-sm font-semibold mb-4 text-foreground">Contact</h4>
+            <div className="flex flex-col gap-3 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span>Parakou, Benin</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-primary" />
+                <span>info@daarualqurane.com</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-primary" />
+                <span>+229 XX XX XX XX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-border mt-12 pt-8 text-center text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Daaru Al Qurane. All rights reserved.
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
