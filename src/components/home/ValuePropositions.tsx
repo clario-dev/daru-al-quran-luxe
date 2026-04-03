@@ -4,33 +4,33 @@ import { BookOpen, Video, Award, Users, Globe, Clock } from "lucide-react";
 const features = [
   {
     icon: Video,
-    title: "Live Zoom Classes",
-    description: "Interactive sessions with certified teachers in real-time, not pre-recorded videos.",
+    title: "Cours en direct sur Zoom",
+    description: "Sessions interactives avec des enseignants certifiés en temps réel, pas de vidéos pré-enregistrées.",
   },
   {
     icon: BookOpen,
-    title: "Structured Curriculum",
-    description: "From beginner to advanced, each level builds on the last with clear milestones.",
+    title: "Programme structuré",
+    description: "Du débutant à l'avancé, chaque niveau s'appuie sur le précédent avec des étapes claires.",
   },
   {
     icon: Award,
-    title: "Certified Teachers",
-    description: "Learn from scholars with Ijazah certification and years of teaching experience.",
+    title: "Enseignants certifiés",
+    description: "Apprenez auprès de savants titulaires d'une Ijazah et dotés d'années d'expérience.",
   },
   {
     icon: Users,
-    title: "Kids & Adults",
-    description: "Tailored programs for every age group with age-appropriate teaching methods.",
+    title: "Enfants & adultes",
+    description: "Programmes adaptés à chaque tranche d'âge avec des méthodes pédagogiques appropriées.",
   },
   {
     icon: Globe,
-    title: "Global Community",
-    description: "Join students from 20+ countries in a supportive learning environment.",
+    title: "Communauté internationale",
+    description: "Rejoignez des étudiants de plus de 20 pays dans un environnement d'apprentissage bienveillant.",
   },
   {
     icon: Clock,
-    title: "Flexible Scheduling",
-    description: "Choose class times that fit your lifestyle across multiple time zones.",
+    title: "Horaires flexibles",
+    description: "Choisissez les horaires de cours qui conviennent à votre emploi du temps, tous fuseaux horaires confondus.",
   },
 ];
 
@@ -39,12 +39,12 @@ const ValuePropositions = () => {
     <section className="py-24 bg-gradient-dark">
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary">Why Choose Us</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-primary">Pourquoi nous choisir</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3 mb-4">
-            An Academy Built for <span className="text-gradient-gold">Excellence</span>
+            Une académie bâtie pour <span className="text-gradient-gold">l'excellence</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Every detail is designed to help you succeed in your Quranic journey.
+            Chaque détail est conçu pour vous accompagner dans votre parcours coranique.
           </p>
         </AnimatedSection>
 

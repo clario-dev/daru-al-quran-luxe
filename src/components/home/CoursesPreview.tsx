@@ -1,34 +1,31 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const courses = [
   {
-    level: "Beginner",
-    title: "Quran Reading Foundations",
-    description: "Learn Arabic letters, pronunciation, and begin reading the Quran with proper basics.",
-    duration: "12 weeks",
-    price: "$49/mo",
-    tag: "Most Popular",
-    accent: "primary",
+    level: "Débutant",
+    title: "Bases de la lecture du Coran",
+    description: "Apprenez les lettres arabes, la prononciation et commencez à lire le Coran avec les bonnes bases.",
+    duration: "12 semaines",
+    price: "49 $/mois",
+    tag: "Le plus populaire",
   },
   {
-    level: "Intermediate",
-    title: "Tajweed & Recitation",
-    description: "Master the rules of Tajweed and beautify your recitation with expert guidance.",
-    duration: "16 weeks",
-    price: "$69/mo",
+    level: "Intermédiaire",
+    title: "Tajweed & Récitation",
+    description: "Maîtrisez les règles du Tajweed et embellissez votre récitation avec des experts.",
+    duration: "16 semaines",
+    price: "69 $/mois",
     tag: null,
-    accent: "emerald",
   },
   {
-    level: "Advanced",
-    title: "Hifz (Memorization)",
-    description: "Structured memorization program with daily review sessions and progress tracking.",
-    duration: "Ongoing",
-    price: "$89/mo",
+    level: "Avancé",
+    title: "Hifz (Mémorisation)",
+    description: "Programme de mémorisation structuré avec des sessions de révision quotidiennes et un suivi de progression.",
+    duration: "Continu",
+    price: "89 $/mois",
     tag: null,
-    accent: "gold",
   },
 ];
 
@@ -37,12 +34,12 @@ const CoursesPreview = () => {
     <section className="py-24">
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary">Our Programs</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-primary">Nos programmes</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3 mb-4">
-            Courses for Every <span className="text-gradient-gold">Level</span>
+            Des cours pour chaque <span className="text-gradient-gold">niveau</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Whether you're just starting or deepening your knowledge, we have the right program.
+            Que vous débutiez ou approfondissiez vos connaissances, nous avons le programme qu'il vous faut.
           </p>
         </AnimatedSection>
 
@@ -69,7 +66,7 @@ const CoursesPreview = () => {
                   <span className="font-semibold text-primary text-lg">{course.price}</span>
                 </div>
                 <Button className="w-full bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
-                  Enroll Now
+                  S'inscrire
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
@@ -79,7 +76,7 @@ const CoursesPreview = () => {
 
         <AnimatedSection className="text-center mt-12">
           <Button variant="outline" size="lg" className="border-border hover:border-primary/30">
-            View All Courses
+            Voir tous les cours
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </AnimatedSection>

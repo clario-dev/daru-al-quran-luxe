@@ -5,20 +5,20 @@ const steps = [
   {
     icon: UserPlus,
     step: "01",
-    title: "Sign Up",
-    description: "Create your account and choose your learning track — Quran, Arabic, or both.",
+    title: "Inscrivez-vous",
+    description: "Créez votre compte et choisissez votre parcours — Coran, arabe ou les deux.",
   },
   {
     icon: CalendarCheck,
     step: "02",
-    title: "Book Your Schedule",
-    description: "Pick class times that work for you. We'll match you with the perfect teacher.",
+    title: "Réservez vos horaires",
+    description: "Choisissez les créneaux qui vous conviennent. Nous vous attribuons l'enseignant idéal.",
   },
   {
     icon: Video,
     step: "03",
-    title: "Start Learning",
-    description: "Join live Zoom sessions and begin your journey with personalized guidance.",
+    title: "Commencez à apprendre",
+    description: "Rejoignez les sessions Zoom en direct et débutez votre parcours avec un accompagnement personnalisé.",
   },
 ];
 
@@ -27,12 +27,12 @@ const HowItWorks = () => {
     <section className="py-24 bg-gradient-dark islamic-pattern">
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary">Simple Process</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-primary">Processus simple</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3 mb-4">
-            How It <span className="text-gradient-gold">Works</span>
+            Comment ça <span className="text-gradient-gold">marche</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Get started in three simple steps.
+            Commencez en trois étapes simples.
           </p>
         </AnimatedSection>
 
