@@ -5,10 +5,10 @@ import { Menu, X, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/courses", label: "Courses" },
-  { href: "/store", label: "Store" },
-  { href: "/about", label: "About" },
+  { href: "/", label: "Accueil" },
+  { href: "/courses", label: "Cours" },
+  { href: "/store", label: "Boutique" },
+  { href: "/about", label: "À propos" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -45,10 +45,10 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-3">
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-              Login
+              Connexion
             </Button>
             <Button size="sm" className="bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
-              Start Learning
+              Commencer
             </Button>
           </div>
 
@@ -86,10 +86,10 @@ const Navbar = () => {
               ))}
               <div className="flex gap-3 pt-2">
                 <Button variant="ghost" size="sm" className="text-muted-foreground">
-                  Login
+                  Connexion
                 </Button>
                 <Button size="sm" className="bg-gradient-gold text-primary-foreground font-semibold">
-                  Start Learning
+                  Commencer
                 </Button>
               </div>
             </div>

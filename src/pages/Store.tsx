@@ -5,12 +5,12 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, Eye } from "lucide-react";
 
 const products = [
-  { id: 1, title: "Tajweed Rules eBook", description: "Complete guide to Tajweed with examples and exercises.", price: "$19", type: "eBook", image: "📖" },
-  { id: 2, title: "Arabic Alphabet Workbook", description: "Practice sheets for mastering Arabic writing and letter forms.", price: "$12", type: "eBook", image: "✍️" },
-  { id: 3, title: "Quran Recitation Series", description: "10 recorded lessons covering Surah Al-Fatiha to An-Nas basics.", price: "$39", type: "Video", image: "🎬" },
-  { id: 4, title: "Daily Adhkar Guide", description: "Morning and evening supplications with transliteration.", price: "$9", type: "eBook", image: "🤲" },
-  { id: 5, title: "Kids Arabic Flashcards", description: "Printable flashcards with vocabulary and illustrations.", price: "$15", type: "Digital", image: "🃏" },
-  { id: 6, title: "Tajweed Masterclass", description: "Advanced 8-hour recorded masterclass with a certified Qari.", price: "$69", type: "Video", image: "🎓" },
+  { id: 1, title: "eBook Règles de Tajweed", description: "Guide complet du Tajweed avec exemples et exercices.", price: "19 $", type: "eBook", image: "📖" },
+  { id: 2, title: "Cahier d'alphabet arabe", description: "Feuilles d'exercices pour maîtriser l'écriture et les formes des lettres arabes.", price: "12 $", type: "eBook", image: "✍️" },
+  { id: 3, title: "Série Récitation du Coran", description: "10 leçons enregistrées couvrant les bases de la Sourate Al-Fatiha à An-Nas.", price: "39 $", type: "Vidéo", image: "🎬" },
+  { id: 4, title: "Guide des Adhkar quotidiens", description: "Invocations du matin et du soir avec translittération.", price: "9 $", type: "eBook", image: "🤲" },
+  { id: 5, title: "Flashcards arabe enfants", description: "Cartes imprimables avec vocabulaire et illustrations.", price: "15 $", type: "Numérique", image: "🃏" },
+  { id: 6, title: "Masterclass Tajweed", description: "Masterclass avancée de 8 heures enregistrée avec un Qari certifié.", price: "69 $", type: "Vidéo", image: "🎓" },
 ];
 
 const Store = () => {
@@ -20,12 +20,12 @@ const Store = () => {
       <section className="pt-32 pb-24">
         <div className="section-container">
           <AnimatedSection className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary">Digital Products</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary">Produits numériques</span>
             <h1 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-4">
-              Our <span className="text-gradient-gold">Store</span>
+              Notre <span className="text-gradient-gold">boutique</span>
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              eBooks, recorded lessons, and guides to support your learning journey.
+              eBooks, leçons enregistrées et guides pour accompagner votre apprentissage.
             </p>
           </AnimatedSection>
 
@@ -47,7 +47,7 @@ const Store = () => {
                       </Button>
                       <Button size="sm" className="bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
                         <ShoppingCart className="h-4 w-4 mr-1" />
-                        Buy
+                        Acheter
                       </Button>
                     </div>
                   </div>

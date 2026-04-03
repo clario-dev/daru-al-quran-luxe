@@ -2,26 +2,29 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Filter } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 const allCourses = [
-  { id: 1, level: "Beginner", audience: "Adults", title: "Quran Reading Foundations", description: "Learn Arabic letters, pronunciation, and start reading the Quran.", duration: "12 weeks", price: "$49/mo", tag: "Most Popular" },
-  { id: 2, level: "Beginner", audience: "Kids", title: "Kids Quran Starter", description: "Fun, engaging Quran classes designed for children ages 5–12.", duration: "10 weeks", price: "$39/mo", tag: null },
-  { id: 3, level: "Intermediate", audience: "Adults", title: "Tajweed & Recitation", description: "Master Tajweed rules and beautify your recitation with certified teachers.", duration: "16 weeks", price: "$69/mo", tag: null },
-  { id: 4, level: "Intermediate", audience: "Kids", title: "Kids Tajweed Program", description: "Age-appropriate Tajweed training with interactive exercises.", duration: "14 weeks", price: "$49/mo", tag: null },
-  { id: 5, level: "Advanced", audience: "Adults", title: "Hifz (Memorization)", description: "Structured memorization with daily review and accountability.", duration: "Ongoing", price: "$89/mo", tag: null },
-  { id: 6, level: "Beginner", audience: "Adults", title: "Arabic Language Basics", description: "Learn conversational Arabic and Quranic vocabulary from scratch.", duration: "12 weeks", price: "$59/mo", tag: "New" },
+  { id: 1, level: "Débutant", audience: "Adultes", title: "Bases de la lecture du Coran", description: "Apprenez les lettres arabes, la prononciation et commencez à lire le Coran.", duration: "12 semaines", price: "49 $/mois", tag: "Le plus populaire" },
+  { id: 2, level: "Débutant", audience: "Enfants", title: "Coran pour enfants — Initiation", description: "Cours de Coran ludiques et engageants conçus pour les enfants de 5 à 12 ans.", duration: "10 semaines", price: "39 $/mois", tag: null },
+  { id: 3, level: "Intermédiaire", audience: "Adultes", title: "Tajweed & Récitation", description: "Maîtrisez les règles du Tajweed et embellissez votre récitation avec des enseignants certifiés.", duration: "16 semaines", price: "69 $/mois", tag: null },
+  { id: 4, level: "Intermédiaire", audience: "Enfants", title: "Programme Tajweed enfants", description: "Formation au Tajweed adaptée à l'âge avec des exercices interactifs.", duration: "14 semaines", price: "49 $/mois", tag: null },
+  { id: 5, level: "Avancé", audience: "Adultes", title: "Hifz (Mémorisation)", description: "Mémorisation structurée avec révision quotidienne et suivi personnalisé.", duration: "Continu", price: "89 $/mois", tag: null },
+  { id: 6, level: "Débutant", audience: "Adultes", title: "Bases de la langue arabe", description: "Apprenez l'arabe conversationnel et le vocabulaire coranique à partir de zéro.", duration: "12 semaines", price: "59 $/mois", tag: "Nouveau" },
 ];
 
+const levels = ["Tous", "Débutant", "Intermédiaire", "Avancé"];
+const audiences = ["Tous", "Adultes", "Enfants"];
+
 const Courses = () => {
-  const [levelFilter, setLevelFilter] = useState("All");
-  const [audienceFilter, setAudienceFilter] = useState("All");
+  const [levelFilter, setLevelFilter] = useState("Tous");
+  const [audienceFilter, setAudienceFilter] = useState("Tous");
 
   const filtered = allCourses.filter(
     (c) =>
-      (levelFilter === "All" || c.level === levelFilter) &&
-      (audienceFilter === "All" || c.audience === audienceFilter)
+      (levelFilter === "Tous" || c.level === levelFilter) &&
+      (audienceFilter === "Tous" || c.audience === audienceFilter)
   );
 
   return (
@@ -30,17 +33,17 @@ const Courses = () => {
       <section className="pt-32 pb-24">
         <div className="section-container">
           <AnimatedSection className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary">Our Programs</span>
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary">Nos programmes</span>
             <h1 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-4">
-              Explore Our <span className="text-gradient-gold">Courses</span>
+              Découvrez nos <span className="text-gradient-gold">cours</span>
             </h1>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Structured programs for every level and age group, taught live via Zoom.
+              Des programmes structurés pour chaque niveau et tranche d'âge, enseignés en direct via Zoom.
             </p>
           </AnimatedSection>
 
           <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-            {["All", "Beginner", "Intermediate", "Advanced"].map((level) => (
+            {levels.map((level) => (
               <button
                 key={level}
                 onClick={() => setLevelFilter(level)}
@@ -54,7 +57,7 @@ const Courses = () => {
               </button>
             ))}
             <div className="w-px h-6 bg-border mx-2" />
-            {["All", "Adults", "Kids"].map((aud) => (
+            {audiences.map((aud) => (
               <button
                 key={aud}
                 onClick={() => setAudienceFilter(aud)}
@@ -89,7 +92,7 @@ const Courses = () => {
                     <span className="font-semibold text-primary text-lg">{course.price}</span>
                   </div>
                   <Button className="w-full bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
-                    Enroll Now <ArrowRight className="ml-2 h-4 w-4" />
+                    S'inscrire <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </div>
               </AnimatedSection>

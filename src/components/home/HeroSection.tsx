@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroBg}
-          alt="Open Quran with golden light"
+          alt="Coran ouvert avec lumière dorée"
           className="w-full h-full object-cover opacity-40"
           width={1920}
           height={1080}
@@ -35,19 +35,19 @@ const HeroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-xs font-medium text-primary">Enrolling Now — Limited Spots</span>
+            <span className="text-xs font-medium text-primary">Inscriptions ouvertes — Places limitées</span>
           </motion.div>
 
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-            Master the{" "}
-            <span className="text-gradient-gold">Quran</span>
+            Maîtrisez le{" "}
+            <span className="text-gradient-gold">Coran</span>
             <br />
-            & Arabic Language
+            & la langue arabe
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed font-body">
-            Live classes with certified teachers from Parakou, Benin.
-            Join students worldwide learning Quran recitation, Tajweed, and Arabic — online via Zoom.
+            Cours en direct avec des enseignants certifiés depuis Parakou, Bénin.
+            Rejoignez des étudiants du monde entier pour apprendre la récitation du Coran, le Tajweed et l'arabe — en ligne via Zoom.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -55,7 +55,7 @@ const HeroSection = () => {
               size="lg"
               className="bg-gradient-gold text-primary-foreground font-semibold px-8 py-6 text-base hover:opacity-90 shadow-glow-gold transition-all duration-300 hover:shadow-[0_0_80px_-10px_hsl(43_72%_55%_/_0.4)]"
             >
-              Start Learning
+              Commencer à apprendre
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
@@ -64,7 +64,7 @@ const HeroSection = () => {
               className="border-border text-foreground px-8 py-6 text-base hover:bg-secondary hover:border-primary/30"
             >
               <Play className="mr-2 h-4 w-4 text-primary" />
-              Book Free Trial
+              Essai gratuit
             </Button>
           </div>
 
@@ -75,10 +75,10 @@ const HeroSection = () => {
             className="mt-16 flex flex-wrap items-center justify-center gap-8 text-muted-foreground"
           >
             {[
-              { value: "500+", label: "Students" },
-              { value: "15+", label: "Teachers" },
-              { value: "20+", label: "Countries" },
-              { value: "4.9★", label: "Rating" },
+              { value: "500+", label: "Étudiants" },
+              { value: "15+", label: "Enseignants" },
+              { value: "20+", label: "Pays" },
+              { value: "4.9★", label: "Note" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl font-bold text-foreground">{stat.value}</div>

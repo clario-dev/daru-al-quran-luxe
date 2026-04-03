@@ -5,19 +5,19 @@ const testimonials = [
   {
     name: "Aisha M.",
     location: "Paris, France",
-    text: "My children have transformed their recitation in just 3 months. The teachers are patient, knowledgeable, and truly care about each student's progress.",
+    text: "Mes enfants ont transformé leur récitation en seulement 3 mois. Les enseignants sont patients, compétents et se soucient vraiment de la progression de chaque élève.",
     rating: 5,
   },
   {
     name: "Ibrahim K.",
-    location: "Lagos, Nigeria",
-    text: "I tried many online Quran programs before. Daaru Al Qurane is the only one that felt like a real classroom. The structure and accountability are unmatched.",
+    location: "Lagos, Nigéria",
+    text: "J'ai essayé beaucoup de programmes de Coran en ligne. Daaru Al Qurane est le seul qui donne l'impression d'une vraie salle de classe. La structure et le suivi sont incomparables.",
     rating: 5,
   },
   {
     name: "Fatima B.",
-    location: "Brussels, Belgium",
-    text: "As a revert, I was nervous about learning Arabic. The beginner program was exactly what I needed — step by step, with so much encouragement.",
+    location: "Bruxelles, Belgique",
+    text: "En tant que convertie, j'étais nerveuse à l'idée d'apprendre l'arabe. Le programme débutant était exactement ce qu'il me fallait — étape par étape, avec beaucoup d'encouragements.",
     rating: 5,
   },
 ];
@@ -27,9 +27,9 @@ const Testimonials = () => {
     <section className="py-24">
       <div className="section-container">
         <AnimatedSection className="text-center mb-16">
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary">Testimonials</span>
+          <span className="text-xs font-semibold uppercase tracking-widest text-primary">Témoignages</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3 mb-4">
-            What Our Students <span className="text-gradient-gold">Say</span>
+            Ce que disent nos <span className="text-gradient-gold">étudiants</span>
           </h2>
         </AnimatedSection>
 
@@ -39,7 +39,7 @@ const Testimonials = () => {
               <div className="p-6 rounded-xl bg-gradient-card border border-border h-full flex flex-col">
                 <Quote className="h-8 w-8 text-primary/30 mb-4" />
                 <p className="text-sm text-foreground/80 leading-relaxed mb-6 flex-1 italic">
-                  "{t.text}"
+                  « {t.text} »
                 </p>
                 <div className="flex items-center gap-1 mb-3">
                   {Array.from({ length: t.rating }).map((_, j) => (

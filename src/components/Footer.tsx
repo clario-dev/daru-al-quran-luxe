@@ -12,28 +12,33 @@ const Footer = () => {
               <span className="font-display text-lg font-semibold">Daaru Al Qurane</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Premium online Quran & Arabic education from Parakou, Benin — serving students worldwide.
+              Éducation en ligne premium de Coran & d'arabe depuis Parakou, Bénin — au service des étudiants du monde entier.
             </p>
           </div>
 
           <div>
-            <h4 className="font-display text-sm font-semibold mb-4 text-foreground">Quick Links</h4>
+            <h4 className="font-display text-sm font-semibold mb-4 text-foreground">Liens rapides</h4>
             <div className="flex flex-col gap-2">
-              {["Courses", "Store", "About", "Contact"].map((link) => (
-                <Link key={link} to={`/${link.toLowerCase()}`} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  {link}
+              {[
+                { label: "Cours", path: "/courses" },
+                { label: "Boutique", path: "/store" },
+                { label: "À propos", path: "/about" },
+                { label: "Contact", path: "/contact" },
+              ].map((link) => (
+                <Link key={link.path} to={link.path} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  {link.label}
                 </Link>
               ))}
             </div>
           </div>
 
           <div>
-            <h4 className="font-display text-sm font-semibold mb-4 text-foreground">Programs</h4>
+            <h4 className="font-display text-sm font-semibold mb-4 text-foreground">Programmes</h4>
             <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-              <span>Quran Recitation</span>
-              <span>Arabic Language</span>
-              <span>Tajweed Mastery</span>
-              <span>Kids Program</span>
+              <span>Récitation du Coran</span>
+              <span>Langue arabe</span>
+              <span>Maîtrise du Tajweed</span>
+              <span>Programme enfants</span>
             </div>
           </div>
 
@@ -42,7 +47,7 @@ const Footer = () => {
             <div className="flex flex-col gap-3 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span>Parakou, Benin</span>
+                <span>Parakou, Bénin</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
@@ -57,7 +62,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border mt-12 pt-8 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Daaru Al Qurane. All rights reserved.
+          © {new Date().getFullYear()} Daaru Al Qurane. Tous droits réservés.
         </div>
       </div>
     </footer>
