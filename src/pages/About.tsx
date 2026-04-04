@@ -104,8 +104,8 @@ const About = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24">
             {[
-              { icon: BookOpen, label: "Centré sur le Coran", desc: "Chaque programme est enraciné dans le Livre d'Allah" },
-              { icon: Award, label: "Enseignants certifiés", desc: "Des savants avec Ijazah et expérience pédagogique" },
+              { icon: BookOpen, label: "Centré sur le Coran et la Sounnah", desc: "Avec la compréhension des pieux prédécesseurs" },
+              { icon: Award, label: "Enseignants compétents", desc: "Des enseignants expérimentés et dotés d'années d'expérience pédagogique" },
               { icon: Users, label: "500+ étudiants", desc: "Une communauté mondiale grandissante" },
               { icon: MapPin, label: "Parakou, Bénin", desc: "Fièrement enracinée en Afrique de l'Ouest" },
             ].map((item, i) => (
