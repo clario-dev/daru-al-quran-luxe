@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import studentReadingImg from "@/assets/student-reading.jpg";
 import childWritingImg from "@/assets/child-writing.jpg";
+import maleStudentImg from "@/assets/male-student-reading.jpg";
 
 const courses = [
   {
@@ -13,7 +14,7 @@ const courses = [
     duration: "12 semaines",
     price: "49 $/mois",
     tag: "Le plus populaire",
-    image: studentReadingImg,
+    image: maleStudentImg,
   },
   {
     level: "Intermédiaire",
@@ -22,7 +23,7 @@ const courses = [
     duration: "16 semaines",
     price: "69 $/mois",
     tag: null,
-    image: childWritingImg,
+    image: studentReadingImg,
   },
   {
     level: "Avancé",
@@ -31,7 +32,7 @@ const courses = [
     duration: "Continu",
     price: "89 $/mois",
     tag: null,
-    image: studentReadingImg,
+    image: childWritingImg,
   },
 ];
 

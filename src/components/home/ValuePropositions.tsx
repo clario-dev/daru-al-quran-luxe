@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { BookOpen, Video, Award, Users, Globe, Clock } from "lucide-react";
-import zoomClassImg from "@/assets/zoom-class.jpg";
+import mixedZoomImg from "@/assets/mixed-zoom-class.jpg";
 
 const features = [
   {
@@ -58,12 +58,12 @@ const ValuePropositions = () => {
               className="relative rounded-2xl overflow-hidden border border-border shadow-glow-gold"
             >
               <motion.img
-                src={zoomClassImg}
-                alt="Étudiantes apprenant le Coran en ligne"
+                src={mixedZoomImg}
+                alt="Étudiants et étudiantes apprenant le Coran en ligne"
                 className="w-full h-72 object-cover"
                 loading="lazy"
-                width={800}
-                height={600}
+                width={1200}
+                height={675}
                 initial={{ scale: 1.1 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
