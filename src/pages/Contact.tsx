@@ -11,14 +11,14 @@ import maleTeacherImg from "@/assets/male-teacher.jpg";
 import teacherImg from "@/assets/teacher-portrait.jpg";
 
 const maleContacts = [
-  { icon: Phone, label: "Téléphone (Frères)", value: "+229 XX XX XX XX", href: "tel:+22900000000" },
-  { icon: MessageCircle, label: "WhatsApp (Frères)", value: "Discutez avec nous", href: "https://wa.me/22900000000" },
+  { icon: Phone, label: "Téléphone (Frères)", value: "01 95 11 99 20", href: "tel:+2290195119920" },
+  { icon: MessageCircle, label: "WhatsApp (Frères)", value: "Discutez avec nous", href: "https://wa.me/2290195119920" },
   { icon: Mail, label: "Email (Frères)", value: "freres@daarualqurane.com", href: "mailto:freres@daarualqurane.com" },
 ];
 
 const femaleContacts = [
-  { icon: Phone, label: "Téléphone (Sœurs)", value: "+229 XX XX XX XX", href: "tel:+22900000001" },
-  { icon: MessageCircle, label: "WhatsApp (Sœurs)", value: "Discutez avec nous", href: "https://wa.me/22900000001" },
+  { icon: Phone, label: "Téléphone (Sœurs)", value: "01 47 98 47 61", href: "tel:+2290147984761" },
+  { icon: MessageCircle, label: "WhatsApp (Sœurs)", value: "Discutez avec nous", href: "https://wa.me/2290147984761" },
   { icon: Mail, label: "Email (Sœurs)", value: "soeurs@daarualqurane.com", href: "mailto:soeurs@daarualqurane.com" },
 ];
 
