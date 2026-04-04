@@ -14,7 +14,7 @@ const products = [
   { id: 3, title: "Série Récitation du Coran", description: "10 leçons enregistrées couvrant les bases de la Sourate Al-Fatiha à An-Nas.", price: "39 $", type: "Vidéo", image: studentReadingImg },
   { id: 4, title: "Guide des Adhkar quotidiens", description: "Invocations du matin et du soir avec translittération.", price: "9 $", type: "eBook", image: quranDeskImg },
   { id: 5, title: "Flashcards arabe enfants", description: "Cartes imprimables avec vocabulaire et illustrations.", price: "15 $", type: "Numérique", image: childWritingImg },
-  { id: 6, title: "Masterclass Tajweed", description: "Masterclass avancée de 8 heures enregistrée avec un Qari compétent.", price: "69 $", type: "Vidéo", image: studentReadingImg },, title: "Masterclass Tajweed", description: "Masterclass avancée de 8 heures enregistrée avec un Qari compétent.", price: "69 $", type: "Vidéo", image: studentReadingImg },.", price: "69 $", type: "Vidéo", image: studentReadingImg },
+  { id: 6, title: "Masterclass Tajweed", description: "Masterclass avancée de 8 heures enregistrée avec un Qari compétent.", price: "69 $", type: "Vidéo", image: studentReadingImg },
 ];
 
 const Store = () => {
