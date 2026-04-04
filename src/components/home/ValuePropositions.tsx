@@ -7,7 +7,7 @@ const features = [
   {
     icon: Video,
     title: "Cours en direct sur Zoom",
-    description: "Sessions interactives avec des enseignants certifiés en temps réel, pas de vidéos pré-enregistrées.",
+    description: "Sessions interactives avec des enseignants compétents en temps réel, pas de vidéos pré-enregistrées.",
   },
   {
     icon: BookOpen,
