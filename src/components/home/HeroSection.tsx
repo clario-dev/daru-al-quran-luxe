@@ -46,7 +46,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed font-body">
-            Cours en direct avec des enseignants certifiés depuis Parakou, Bénin.
+            Cours en direct avec des enseignants compétents depuis Parakou, Bénin.
             Rejoignez des étudiants du monde entier pour apprendre la récitation du Coran, le Tajweed et l'arabe — en ligne via Zoom.
           </p>
 

@@ -7,7 +7,7 @@ const features = [
   {
     icon: Video,
     title: "Cours en direct sur Zoom",
-    description: "Sessions interactives avec des enseignants certifiés en temps réel, pas de vidéos pré-enregistrées.",
+    description: "Sessions interactives avec des enseignants compétents en temps réel, pas de vidéos pré-enregistrées.",
   },
   {
     icon: BookOpen,
@@ -16,8 +16,8 @@ const features = [
   },
   {
     icon: Award,
-    title: "Enseignants certifiés",
-    description: "Apprenez auprès de savants titulaires d'une Ijazah et dotés d'années d'expérience.",
+    title: "Enseignants compétents",
+    description: "Apprenez auprès d'enseignants expérimentés et dotés d'années d'expérience pédagogique.",
   },
   {
     icon: Users,

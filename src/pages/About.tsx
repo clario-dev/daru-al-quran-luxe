@@ -48,7 +48,7 @@ const About = () => {
                   Fondée à Parakou, au Bénin, <strong className="text-foreground">Daaru Al Qurane</strong> est née d'une conviction profonde : l'éducation coranique de qualité doit être accessible à chaque musulman, quel que soit son lieu de résidence.
                 </p>
                 <p>
-                  Ce qui a commencé comme un cercle d'enseignement local s'est transformé en une académie internationale en ligne au service d'étudiants à travers l'Afrique, l'Europe et la diaspora. Nos enseignants certifiés allient savoir traditionnel et pédagogie moderne pour offrir une expérience d'apprentissage exceptionnelle.
+                  Ce qui a commencé comme un cercle d'enseignement local s'est transformé en une académie internationale en ligne au service d'étudiants à travers l'Afrique, l'Europe et la diaspora. Ce qui a commencé comme un cercle d'enseignement local s'est transformé en une académie internationale en ligne au service d'étudiants à travers l'Afrique, l'Europe et la diaspora. Nos enseignants compétents allient savoir traditionnel et pédagogie moderne pour offrir une expérience d'apprentissage exceptionnelle. pour offrir une expérience d'apprentissage exceptionnelle.
                 </p>
                 <p>
                   Grâce à des cours en direct sur Zoom, des programmes structurés et une communauté bienveillante, nous avons aidé des centaines d'étudiants — enfants comme adultes — à construire une relation durable avec le Coran.
@@ -104,8 +104,8 @@ const About = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24">
             {[
-              { icon: BookOpen, label: "Centré sur le Coran", desc: "Chaque programme est enraciné dans le Livre d'Allah" },
-              { icon: Award, label: "Enseignants certifiés", desc: "Des savants avec Ijazah et expérience pédagogique" },
+              { icon: BookOpen, label: "Centré sur le Coran et la Sounnah", desc: "Avec la compréhension des pieux prédécesseurs" },
+              { icon: Award, label: "Enseignants compétents", desc: "Des enseignants expérimentés et dotés d'années d'expérience pédagogique" },
               { icon: Users, label: "500+ étudiants", desc: "Une communauté mondiale grandissante" },
               { icon: MapPin, label: "Parakou, Bénin", desc: "Fièrement enracinée en Afrique de l'Ouest" },
             ].map((item, i) => (
