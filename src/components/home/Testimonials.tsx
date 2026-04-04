@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Star, Quote } from "lucide-react";
+import teacherImg from "@/assets/teacher-portrait.jpg";
 
 const testimonials = [
   {
@@ -24,8 +26,24 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-24">
-      <div className="section-container">
+    <section className="py-24 relative overflow-hidden">
+      {/* Floating teacher illustration */}
+      <motion.div
+        className="absolute -left-10 bottom-10 w-64 h-64 opacity-15 hidden lg:block"
+        animate={{ y: [-8, 8, -8], rotate: [-2, 2, -2] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <img
+          src={teacherImg}
+          alt=""
+          className="w-full h-full object-contain rounded-2xl"
+          loading="lazy"
+          width={600}
+          height={600}
+        />
+      </motion.div>
+
+      <div className="section-container relative">
         <AnimatedSection className="text-center mb-16">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Témoignages</span>
           <h2 className="font-display text-3xl md:text-4xl font-bold mt-3 mb-4">
@@ -36,7 +54,11 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <AnimatedSection key={t.name} delay={i * 0.15}>
-              <div className="p-6 rounded-xl bg-gradient-card border border-border h-full flex flex-col">
+              <motion.div
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+                className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/20 transition-all duration-300 h-full flex flex-col"
+              >
                 <Quote className="h-8 w-8 text-primary/30 mb-4" />
                 <p className="text-sm text-foreground/80 leading-relaxed mb-6 flex-1 italic">
                   « {t.text} »
@@ -50,7 +72,7 @@ const Testimonials = () => {
                   <p className="font-semibold text-sm">{t.name}</p>
                   <p className="text-xs text-muted-foreground">{t.location}</p>
                 </div>
-              </div>
+              </motion.div>
             </AnimatedSection>
           ))}
         </div>

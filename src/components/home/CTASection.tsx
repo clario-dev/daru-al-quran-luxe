@@ -1,10 +1,28 @@
+import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import mosqueImg from "@/assets/mosque-parakou.jpg";
 
 const CTASection = () => {
   return (
-    <section className="py-24 bg-gradient-dark relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden">
+      {/* Animated mosque background */}
+      <div className="absolute inset-0">
+        <motion.img
+          src={mosqueImg}
+          alt=""
+          className="w-full h-full object-cover opacity-20"
+          loading="lazy"
+          width={1200}
+          height={675}
+          initial={{ scale: 1.1 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 2, ease: "easeOut" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/70" />
+      </div>
       <div className="absolute inset-0 islamic-pattern" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-primary/5 blur-[120px]" />
 

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -5,14 +6,32 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import mosqueImg from "@/assets/mosque-parakou.jpg";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <section className="pt-32 pb-24">
-        <div className="section-container">
-          <AnimatedSection className="text-center mb-16">
+
+      {/* Hero with mosque */}
+      <section className="relative pt-32 pb-16 overflow-hidden">
+        <div className="absolute inset-0">
+          <motion.img
+            src={mosqueImg}
+            alt=""
+            className="w-full h-full object-cover opacity-15"
+            loading="lazy"
+            width={1200}
+            height={675}
+            initial={{ scale: 1.15 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 2, ease: "easeOut" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/90 to-background" />
+        </div>
+        <div className="relative section-container text-center">
+          <AnimatedSection>
             <span className="text-xs font-semibold uppercase tracking-widest text-primary">Nous contacter</span>
             <h1 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-4">
               Contactez-<span className="text-gradient-gold">nous</span>
@@ -21,7 +40,11 @@ const Contact = () => {
               Vous avez des questions ? Nous serions ravis de vous entendre. Écrivez-nous et nous vous répondrons rapidement.
             </p>
           </AnimatedSection>
+        </div>
+      </section>
 
+      <section className="pb-24">
+        <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <AnimatedSection>
               <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
@@ -57,7 +80,12 @@ const Contact = () => {
                   { icon: MessageCircle, label: "WhatsApp", value: "Discutez avec nous sur WhatsApp", href: "https://wa.me/22900000000" },
                   { icon: MapPin, label: "Adresse", value: "Parakou, Bénin", href: null },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-start gap-4 p-5 rounded-xl bg-gradient-card border border-border">
+                  <motion.div
+                    key={item.label}
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                    className="flex items-start gap-4 p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/20 transition-all duration-300"
+                  >
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <item.icon className="h-5 w-5 text-primary" />
                     </div>
@@ -71,7 +99,7 @@ const Contact = () => {
                         <p className="text-sm text-muted-foreground">{item.value}</p>
                       )}
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </AnimatedSection>

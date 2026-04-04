@@ -1,5 +1,7 @@
+import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { BookOpen, Video, Award, Users, Globe, Clock } from "lucide-react";
+import zoomClassImg from "@/assets/zoom-class.jpg";
 
 const features = [
   {
@@ -38,26 +40,54 @@ const ValuePropositions = () => {
   return (
     <section className="py-24 bg-gradient-dark">
       <div className="section-container">
-        <AnimatedSection className="text-center mb-16">
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary">Pourquoi nous choisir</span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mt-3 mb-4">
-            Une académie bâtie pour <span className="text-gradient-gold">l'excellence</span>
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Chaque détail est conçu pour vous accompagner dans votre parcours coranique.
-          </p>
-        </AnimatedSection>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          <AnimatedSection className="text-left">
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary">Pourquoi nous choisir</span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mt-3 mb-4">
+              Une académie bâtie pour <span className="text-gradient-gold">l'excellence</span>
+            </h2>
+            <p className="text-muted-foreground max-w-xl">
+              Chaque détail est conçu pour vous accompagner dans votre parcours coranique.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.2}>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className="relative rounded-2xl overflow-hidden border border-border shadow-glow-gold"
+            >
+              <motion.img
+                src={zoomClassImg}
+                alt="Étudiantes apprenant le Coran en ligne"
+                className="w-full h-72 object-cover"
+                loading="lazy"
+                width={800}
+                height={600}
+                initial={{ scale: 1.1 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+            </motion.div>
+          </AnimatedSection>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
             <AnimatedSection key={feature.title} delay={i * 0.1}>
-              <div className="group p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow-gold h-full">
+              <motion.div
+                whileHover={{ y: -5, borderColor: "hsl(43 72% 55% / 0.3)" }}
+                transition={{ duration: 0.3 }}
+                className="group p-6 rounded-xl bg-gradient-card border border-border transition-all duration-300 hover:shadow-glow-gold h-full"
+              >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <feature.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-display text-lg font-semibold mb-2">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
-              </div>
+              </motion.div>
             </AnimatedSection>
           ))}
         </div>
