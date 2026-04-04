@@ -17,7 +17,7 @@ const maleContacts = [
 ];
 
 const femaleContacts = [
-  { icon: Phone, label: "Téléphone (Sœurs)", value: "01 47 98 47 61", href: "tel:+22901479847 61" },
+  { icon: Phone, label: "Téléphone (Sœurs)", value: "01 47 98 47 61", href: "tel:+2290147984761" },
   { icon: MessageCircle, label: "WhatsApp (Sœurs)", value: "Discutez avec nous", href: "https://wa.me/2290147984761" },
   { icon: Mail, label: "Email (Sœurs)", value: "soeurs@daarualqurane.com", href: "mailto:soeurs@daarualqurane.com" },
 ];
