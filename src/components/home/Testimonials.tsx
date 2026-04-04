@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Star, Quote } from "lucide-react";
-import teacherImg from "@/assets/teacher-portrait.jpg";
+import maleStudentImg from "@/assets/male-student-reading.jpg";
 
 const testimonials = [
   {
@@ -27,19 +27,19 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <section className="py-24 relative overflow-hidden">
-      {/* Floating teacher illustration */}
+      {/* Floating illustration */}
       <motion.div
         className="absolute -left-10 bottom-10 w-64 h-64 opacity-15 hidden lg:block"
         animate={{ y: [-8, 8, -8], rotate: [-2, 2, -2] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       >
         <img
-          src={teacherImg}
+          src={maleStudentImg}
           alt=""
           className="w-full h-full object-contain rounded-2xl"
           loading="lazy"
-          width={600}
-          height={600}
+          width={1024}
+          height={1024}
         />
       </motion.div>
 

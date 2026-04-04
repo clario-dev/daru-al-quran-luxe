@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { BookOpen, Heart, Target, MapPin, Award, Users } from "lucide-react";
 import mosqueImg from "@/assets/mosque-parakou.jpg";
+import maleTeacherImg from "@/assets/male-teacher.jpg";
 import teacherImg from "@/assets/teacher-portrait.jpg";
 
 const About = () => {
@@ -56,25 +57,48 @@ const About = () => {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-                className="relative rounded-2xl overflow-hidden border border-border shadow-glow-gold"
-              >
-                <motion.img
-                  src={teacherImg}
-                  alt="Enseignant de Daaru Al Qurane"
-                  className="w-full h-80 object-cover"
-                  loading="lazy"
-                  width={600}
-                  height={600}
-                  initial={{ scale: 1.1 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.2, ease: "easeOut" }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-              </motion.div>
+              <div className="grid grid-cols-2 gap-4">
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative rounded-2xl overflow-hidden border border-border shadow-glow-gold"
+                >
+                  <motion.img
+                    src={maleTeacherImg}
+                    alt="Enseignant de Daaru Al Qurane"
+                    className="w-full h-48 object-cover"
+                    loading="lazy"
+                    width={1024}
+                    height={1024}
+                    initial={{ scale: 1.1 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2, ease: "easeOut" }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                  <span className="absolute bottom-2 left-3 text-xs font-semibold text-primary">Section Frères</span>
+                </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.03 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative rounded-2xl overflow-hidden border border-border shadow-glow-gold"
+                >
+                  <motion.img
+                    src={teacherImg}
+                    alt="Enseignante de Daaru Al Qurane"
+                    className="w-full h-48 object-cover"
+                    loading="lazy"
+                    width={600}
+                    height={600}
+                    initial={{ scale: 1.1 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2, ease: "easeOut" }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                  <span className="absolute bottom-2 left-3 text-xs font-semibold text-primary">Section Sœurs</span>
+                </motion.div>
+              </div>
             </AnimatedSection>
           </div>
 
