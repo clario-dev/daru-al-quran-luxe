@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import AnimatedCounter from "@/components/home/AnimatedCounter";
 
 const HeroSection = () => {
   return (
@@ -75,13 +76,15 @@ const HeroSection = () => {
             className="mt-16 flex flex-wrap items-center justify-center gap-8 text-muted-foreground"
           >
             {[
-              { value: "500+", label: "Étudiants" },
-              { value: "15+", label: "Enseignants" },
-              { value: "20+", label: "Pays" },
-              { value: "4.9★", label: "Note" },
+              { end: 500, suffix: "+", label: "Étudiants", decimals: 0 },
+              { end: 15, suffix: "+", label: "Enseignants", decimals: 0 },
+              { end: 20, suffix: "+", label: "Pays", decimals: 0 },
+              { end: 4.9, suffix: "★", label: "Note", decimals: 1 },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-2xl font-bold text-foreground">{stat.value}</div>
+                <div className="text-2xl font-bold text-foreground">
+                  <AnimatedCounter end={stat.end} suffix={stat.suffix} decimals={stat.decimals} duration={2.5} />
+                </div>
                 <div className="text-xs">{stat.label}</div>
               </div>
             ))}
