@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, BookOpen } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
@@ -21,10 +22,7 @@ const Navbar = () => {
       <div className="section-container">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <BookOpen className="h-7 w-7 text-primary" />
-            <span className="font-display text-xl font-semibold text-foreground">
-              Daaru Al Qurane
-            </span>
+            <img src={logo} alt="Daaru Al Qurane" className="h-10 md:h-12 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
