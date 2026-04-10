@@ -71,6 +71,22 @@ const HeroSection = () => {
           </div>
 
           <motion.div
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
+            className="mt-12 max-w-2xl mx-auto"
+          >
+            <img
+              src={heroMixed}
+              alt="Étudiants apprenant le Coran en ligne"
+              className="w-full rounded-2xl border border-border/50 shadow-2xl shadow-primary/10"
+              width={800}
+              height={450}
+              loading="eager"
+            />
+          </motion.div>
+
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
