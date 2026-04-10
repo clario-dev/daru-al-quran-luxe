@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { BookOpen, Video, Award, Users, Globe, Clock } from "lucide-react";
-import mixedZoomImg from "@/assets/mixed-zoom-class.jpg";
+import mixedZoomImg from "@/assets/hero-mixed.png";
 
 const features = [
   {
