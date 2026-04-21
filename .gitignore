@@ -1,0 +1,22 @@
+# WordPress core
+/wp-admin/
+/wp-includes/
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/backup-db/
+/wp-content/backups/
+
+# Fichiers sensibles
+wp-config.php
+.htaccess
+.env
+
+# Logs et caches
+*.log
+.DS_Store
+Thumbs.db
+
+# Dépendances
+/vendor/
+/node_modules/
