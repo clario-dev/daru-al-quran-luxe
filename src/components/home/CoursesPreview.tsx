@@ -88,9 +88,11 @@ const CoursesPreview = () => {
                     <span className="text-muted-foreground">{course.duration}</span>
                     <span className="font-semibold text-primary text-lg">{course.price}</span>
                   </div>
-                  <Button className="w-full bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
-                    S'inscrire
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                  <Button asChild className="w-full bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
+                    <a href="https://daaralquran.mychariow.shop/prd_ijq3ih/checkout" target="_blank" rel="noopener noreferrer">
+                      S'inscrire
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
                   </Button>
                 </div>
               </motion.div>

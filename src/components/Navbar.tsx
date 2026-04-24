@@ -45,8 +45,10 @@ const Navbar = () => {
             <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
               Connexion
             </Button>
-            <Button size="sm" className="bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
-              Commencer
+            <Button asChild size="sm" className="bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
+              <a href="https://daaralquran.mychariow.shop/prd_ijq3ih/checkout" target="_blank" rel="noopener noreferrer">
+                S'inscrire
+              </a>
             </Button>
           </div>
 
@@ -86,8 +88,10 @@ const Navbar = () => {
                 <Button variant="ghost" size="sm" className="text-muted-foreground">
                   Connexion
                 </Button>
-                <Button size="sm" className="bg-gradient-gold text-primary-foreground font-semibold">
-                  Commencer
+                <Button asChild size="sm" className="bg-gradient-gold text-primary-foreground font-semibold">
+                  <a href="https://daaralquran.mychariow.shop/prd_ijq3ih/checkout" target="_blank" rel="noopener noreferrer">
+                    S'inscrire
+                  </a>
                 </Button>
               </div>
             </div>
