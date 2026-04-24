@@ -48,10 +48,10 @@ const About = () => {
                   Fondée à Parakou, au Bénin, <strong className="text-foreground">Daaru Al Qurane</strong> est née d'une conviction profonde : l'éducation coranique de qualité doit être accessible à chaque musulman, quel que soit son lieu de résidence.
                 </p>
                 <p>
-                  Ce qui a commencé comme un cercle d'enseignement local s'est transformé en une académie internationale en ligne au service d'étudiants à travers l'Afrique, l'Europe et la diaspora. Ce qui a commencé comme un cercle d'enseignement local s'est transformé en une académie internationale en ligne au service d'étudiants à travers l'Afrique, l'Europe et la diaspora. Nos enseignants compétents allient savoir traditionnel et pédagogie moderne pour offrir une expérience d'apprentissage exceptionnelle. pour offrir une expérience d'apprentissage exceptionnelle.
+                  <strong className="text-foreground">Notre méthodologie est celle des pieux prédécesseurs (Salaf As-Salih)</strong>, fondée sur le Coran et la Sounnah authentique selon la compréhension des Compagnons et des savants reconnus de la Sounnah. Nous nous désavouons clairement de tous les groupes hérétiques et égarés.
                 </p>
                 <p>
-                  Grâce à des cours en direct sur Zoom, des programmes structurés et une communauté bienveillante, nous avons aidé des centaines d'étudiants — enfants comme adultes — à construire une relation durable avec le Coran.
+                  Grâce à des cours en direct sur Zoom, des programmes structurés et une communauté bienveillante, nous avons aidé des centaines d'étudiants — enfants comme adultes — à construire une relation durable avec le Coran et la langue arabe.
                 </p>
               </div>
             </AnimatedSection>
