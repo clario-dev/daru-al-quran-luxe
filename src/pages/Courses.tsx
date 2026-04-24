@@ -3,129 +3,271 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight, BookOpen, Languages, Heart, CheckCircle2, Gift } from "lucide-react";
 import studentReadingImg from "@/assets/student-reading.jpg";
 import childWritingImg from "@/assets/child-writing.jpg";
 import quranDeskImg from "@/assets/quran-desk.jpg";
-import zoomClassImg from "@/assets/zoom-class.jpg";
 
-const courseImages = [studentReadingImg, childWritingImg, quranDeskImg, zoomClassImg, studentReadingImg, childWritingImg];
+const CHARIOW_URL = "https://daaralquran.mychariow.shop/prd_ijq3ih/checkout";
 
-const allCourses = [
-  { id: 1, level: "Débutant", audience: "Adultes", title: "Bases de la lecture du Coran", description: "Apprenez les lettres arabes, la prononciation et commencez à lire le Coran.", duration: "12 semaines", price: "49 $/mois", tag: "Le plus populaire" },
-  { id: 2, level: "Débutant", audience: "Enfants", title: "Coran pour enfants — Initiation", description: "Cours de Coran ludiques et engageants conçus pour les enfants de 5 à 12 ans.", duration: "10 semaines", price: "39 $/mois", tag: null },
-  { id: 3, level: "Intermédiaire", audience: "Adultes", title: "Tajweed & Récitation", description: "Maîtrisez les règles du Tajweed et embellissez votre récitation avec des enseignants compétents.", duration: "16 semaines", price: "69 $/mois", tag: null },
-  { id: 4, level: "Intermédiaire", audience: "Enfants", title: "Programme Tajweed enfants", description: "Formation au Tajweed adaptée à l'âge avec des exercices interactifs.", duration: "14 semaines", price: "49 $/mois", tag: null },
-  { id: 5, level: "Avancé", audience: "Adultes", title: "Hifz (Mémorisation)", description: "Mémorisation structurée avec révision quotidienne et suivi personnalisé.", duration: "Continu", price: "89 $/mois", tag: null },
-  { id: 6, level: "Débutant", audience: "Adultes", title: "Bases de la langue arabe", description: "Apprenez l'arabe conversationnel et le vocabulaire coranique à partir de zéro.", duration: "12 semaines", price: "59 $/mois", tag: "Nouveau" },
+const arabicLevels = [
+  {
+    level: "Niveau 1",
+    title: "Initiation — Méthode Nouniya",
+    description: "Acquisition de l'alphabet, des sons, des bases de lecture, et des premiers mots. Méthode ludique et structurée.",
+  },
+  {
+    level: "Niveaux 2 à 5",
+    title: "Tomes de Médine",
+    description: "Progression complète en grammaire, vocabulaire, conjugaison, compréhension de textes et expression.",
+  },
+  {
+    level: "Niveau 6",
+    title: "Grammaire Avancée",
+    description: "Étude de l'Ajrumiyya ou de Nahw Wadhih selon le profil, pour maîtriser les structures de la langue.",
+  },
+  {
+    level: "Niveau 7",
+    title: "Rhétorique & Poésie (Balagha)",
+    description: "Analyse stylistique, figures de style, éloquence et rédaction poétique. Accès réservé aux élèves avancés.",
+  },
 ];
 
-const levels = ["Tous", "Débutant", "Intermédiaire", "Avancé"];
-const audiences = ["Tous", "Adultes", "Enfants"];
+const quranPrograms = [
+  {
+    title: "Tajwid",
+    description: "Apprentissage progressif des règles de récitation selon les normes classiques.",
+  },
+  {
+    title: "Mémorisation (Hifdh)",
+    description: "Programmes adaptés selon le rythme et la capacité de chacun.",
+  },
+  {
+    title: "Révision & perfectionnement",
+    description: "Pour consolider la mémorisation et affiner la récitation.",
+  },
+  {
+    title: "Ijaza (Hafs)",
+    description: "Pour les étudiants avancés souhaitant une certification dans la transmission.",
+  },
+  {
+    title: "Qirâ'ât (7 lectures)",
+    description: "Pour les spécialistes souhaitant maîtriser les différentes récitations du Coran.",
+  },
+];
 
 const Courses = () => {
-  const [levelFilter, setLevelFilter] = useState("Tous");
-  const [audienceFilter, setAudienceFilter] = useState("Tous");
-
-  const filtered = allCourses.filter(
-    (c) =>
-      (levelFilter === "Tous" || c.level === levelFilter) &&
-      (audienceFilter === "Tous" || c.audience === audienceFilter)
-  );
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <section className="pt-32 pb-24">
+
+      {/* Hero */}
+      <section className="pt-32 pb-16">
         <div className="section-container">
-          <AnimatedSection className="text-center mb-12">
+          <AnimatedSection className="text-center max-w-3xl mx-auto">
             <span className="text-xs font-semibold uppercase tracking-widest text-primary">Nos programmes</span>
             <h1 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-4">
-              Découvrez nos <span className="text-gradient-gold">cours</span>
+              Apprendre le Coran et la <span className="text-gradient-gold">langue arabe</span>
             </h1>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Des programmes structurés pour chaque niveau et tranche d'âge, enseignés en direct via Zoom.
+            <p className="text-muted-foreground text-lg">
+              Avec des enseignants qualifiés. Cours en ligne pour adultes & enfants — en français, en direct via Zoom.
             </p>
           </AnimatedSection>
+        </div>
+      </section>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-            {levels.map((level) => (
-              <button
-                key={level}
-                onClick={() => setLevelFilter(level)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  levelFilter === level
-                    ? "bg-gradient-gold text-primary-foreground"
-                    : "bg-secondary text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {level}
-              </button>
-            ))}
-            <div className="w-px h-6 bg-border mx-2" />
-            {audiences.map((aud) => (
-              <button
-                key={aud}
-                onClick={() => setAudienceFilter(aud)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-                  audienceFilter === aud
-                    ? "bg-gradient-gold text-primary-foreground"
-                    : "bg-secondary text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {aud}
-              </button>
-            ))}
-          </div>
+      {/* Coran */}
+      <section className="py-16">
+        <div className="section-container">
+          <AnimatedSection className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                <BookOpen className="h-4 w-4 text-primary" />
+                <span className="text-xs font-semibold uppercase tracking-wider text-primary">Coran</span>
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+                Cours de <span className="text-gradient-gold">Coran</span> — pour tous les niveaux
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                À Daaru Al'Qurane, l'apprentissage du Coran est au cœur de notre mission. Que vous soyez débutant ou avancé, nous vous accompagnons pas à pas, avec une méthode rigoureuse et bienveillante. Approche personnalisée, enseignement en solo ou en petit groupe, avec des enseignants expérimentés et passionnés.
+              </p>
+            </div>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className="relative rounded-2xl overflow-hidden border border-border shadow-glow-gold"
+            >
+              <img
+                src={studentReadingImg}
+                alt="Étudiante lisant le Coran"
+                className="w-full h-72 object-cover"
+                loading="lazy"
+                width={1200}
+                height={675}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+            </motion.div>
+          </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filtered.map((course, i) => (
-              <AnimatedSection key={course.id} delay={i * 0.1}>
+            {quranPrograms.map((p, i) => (
+              <AnimatedSection key={p.title} delay={i * 0.08}>
                 <motion.div
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -5 }}
                   transition={{ duration: 0.3 }}
-                  className="relative group rounded-xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow-gold h-full flex flex-col overflow-hidden"
+                  className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow-gold h-full"
                 >
-                  {course.tag && (
-                    <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-gradient-gold text-xs font-semibold text-primary-foreground">
-                      {course.tag}
-                    </div>
-                  )}
-                  <div className="relative h-40 overflow-hidden">
-                    <motion.img
-                      src={courseImages[course.id - 1]}
-                      alt={course.title}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                      width={800}
-                      height={600}
-                      whileHover={{ scale: 1.08 }}
-                      transition={{ duration: 0.5 }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-primary">{course.level}</span>
-                      <span className="text-xs text-muted-foreground">• {course.audience}</span>
-                    </div>
-                    <h3 className="font-display text-xl font-semibold mb-2">{course.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-6 leading-relaxed flex-1">{course.description}</p>
-                    <div className="flex items-center justify-between mb-4 text-sm">
-                      <span className="text-muted-foreground">{course.duration}</span>
-                      <span className="font-semibold text-primary text-lg">{course.price}</span>
-                    </div>
-                    <Button className="w-full bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
-                      S'inscrire <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </div>
+                  <CheckCircle2 className="h-6 w-6 text-primary mb-3" />
+                  <h3 className="font-display text-lg font-semibold mb-2">{p.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
                 </motion.div>
               </AnimatedSection>
             ))}
           </div>
+
+          <AnimatedSection className="text-center mt-10">
+            <Button asChild size="lg" className="bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
+              <a href={CHARIOW_URL} target="_blank" rel="noopener noreferrer">
+                S'inscrire au cours de Coran <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimatedSection>
         </div>
       </section>
+
+      {/* Arabe */}
+      <section className="py-16 bg-gradient-dark">
+        <div className="section-container">
+          <AnimatedSection className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className="relative rounded-2xl overflow-hidden border border-border shadow-glow-gold order-2 lg:order-1"
+            >
+              <img
+                src={childWritingImg}
+                alt="Enfant écrivant en arabe"
+                className="w-full h-72 object-cover"
+                loading="lazy"
+                width={1200}
+                height={675}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+            </motion.div>
+            <div className="order-1 lg:order-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
+                <Languages className="h-4 w-4 text-primary" />
+                <span className="text-xs font-semibold uppercase tracking-wider text-primary">Langue arabe</span>
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+                De l'<span className="text-gradient-gold">initiation</span> à la maîtrise
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                À Daaru Al'Qurane, la langue arabe est enseignée comme un outil vivant, au service de la compréhension du Coran, des sciences islamiques et de l'expression fluide, orale comme écrite. Cours en ligne flexibles, en solo ou en petit groupe, avec un suivi pédagogique personnalisé.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {arabicLevels.map((l, i) => (
+              <AnimatedSection key={l.title} delay={i * 0.08}>
+                <motion.div
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow-gold h-full"
+                >
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary">{l.level}</span>
+                  <h3 className="font-display text-xl font-semibold mt-1 mb-2">{l.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{l.description}</p>
+                </motion.div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection className="text-center mt-10">
+            <Button asChild size="lg" className="bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
+              <a href={CHARIOW_URL} target="_blank" rel="noopener noreferrer">
+                S'inscrire au cours d'arabe <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Aqida & Fiqh - Gratuit */}
+      <section className="py-16">
+        <div className="section-container">
+          <AnimatedSection className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald/10 border border-emerald/30 mb-4">
+              <Gift className="h-4 w-4 text-emerald" />
+              <span className="text-xs font-semibold uppercase tracking-wider text-emerald">Offerts gratuitement</span>
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+              Cours d'<span className="text-gradient-gold">Aqida</span> & de <span className="text-gradient-gold">Fiqh</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Une compréhension solide de la foi et de la pratique est essentielle pour tout musulman. C'est pourquoi nous offrons gratuitement, à tous nos élèves inscrits, ces enseignements complémentaires — inclus en bonus dans chaque niveau d'apprentissage (langue arabe ou Coran), sans coût supplémentaire.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <AnimatedSection delay={0.1}>
+              <motion.div
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+                className="relative p-8 rounded-2xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow-gold h-full"
+              >
+                <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-emerald/15 border border-emerald/30">
+                  <span className="text-xs font-bold text-emerald">GRATUIT</span>
+                </div>
+                <Heart className="h-8 w-8 text-primary mb-4" />
+                <h3 className="font-display text-xl font-semibold mb-3">Aqida (croyance)</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Basés sur les textes authentiques et les explications des savants reconnus, ces cours permettent de consolider la croyance islamique sur des bases claires, loin des confusions contemporaines.
+                </p>
+              </motion.div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <motion.div
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+                className="relative p-8 rounded-2xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow-gold h-full"
+              >
+                <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-emerald/15 border border-emerald/30">
+                  <span className="text-xs font-bold text-emerald">GRATUIT</span>
+                </div>
+                <BookOpen className="h-8 w-8 text-primary mb-4" />
+                <h3 className="font-display text-xl font-semibold mb-3">Fiqh (jurisprudence)</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Adaptés au niveau de l'élève, ces cours introduisent progressivement les règles de la prière, la purification, le jeûne, etc., selon une approche méthodique et respectueuse des écoles classiques.
+                </p>
+              </motion.div>
+            </AnimatedSection>
+          </div>
+
+          <AnimatedSection className="text-center mt-12">
+            <div
+              className="relative max-w-2xl mx-auto p-8 rounded-2xl border border-border bg-gradient-card"
+              style={{ backgroundImage: `url(${quranDeskImg})`, backgroundSize: "cover", backgroundPosition: "center" }}
+            >
+              <div className="absolute inset-0 bg-background/85 rounded-2xl" />
+              <div className="relative">
+                <h3 className="font-display text-2xl font-bold mb-3">Prêt à commencer votre parcours ?</h3>
+                <p className="text-muted-foreground mb-6">
+                  Inscrivez-vous dès aujourd'hui et bénéficiez d'un accompagnement personnalisé.
+                </p>
+                <Button asChild size="lg" className="bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
+                  <a href={CHARIOW_URL} target="_blank" rel="noopener noreferrer">
+                    S'inscrire maintenant <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

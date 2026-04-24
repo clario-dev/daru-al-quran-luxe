@@ -36,11 +36,14 @@ const CTASection = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
+              asChild
               size="lg"
               className="bg-gradient-gold text-primary-foreground font-semibold px-10 py-6 text-base hover:opacity-90 shadow-glow-gold"
             >
-              Réserver un essai gratuit
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <a href="https://daaralquran.mychariow.shop/prd_ijq3ih/checkout" target="_blank" rel="noopener noreferrer">
+                S'inscrire
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
             <Button
               variant="outline"

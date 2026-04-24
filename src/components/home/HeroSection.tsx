@@ -48,17 +48,21 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed font-body">
-            Cours en direct avec des enseignants compétents depuis Parakou, Bénin.
-            Rejoignez des étudiants du monde entier pour apprendre la récitation du Coran, le Tajweed et l'arabe — en ligne via Zoom.
+            Apprendre le Coran et la langue arabe avec des enseignants qualifiés.
+            <br />
+            Cours en ligne pour adultes & enfants — en français, en direct via Zoom depuis Parakou, Bénin.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
+              asChild
               size="lg"
               className="bg-gradient-gold text-primary-foreground font-semibold px-8 py-6 text-base hover:opacity-90 shadow-glow-gold transition-all duration-300 hover:shadow-[0_0_80px_-10px_hsl(43_72%_55%_/_0.4)]"
             >
-              Commencer à apprendre
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <a href="https://daaralquran.mychariow.shop/prd_ijq3ih/checkout" target="_blank" rel="noopener noreferrer">
+                S'inscrire
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
             <Button
               variant="outline"
