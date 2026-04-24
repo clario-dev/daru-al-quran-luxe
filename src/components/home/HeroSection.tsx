@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 import AnimatedCounter from "@/components/home/AnimatedCounter";
@@ -63,14 +63,6 @@ const HeroSection = () => {
                 S'inscrire
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-border text-foreground px-8 py-6 text-base hover:bg-secondary hover:border-primary/30"
-            >
-              <Play className="mr-2 h-4 w-4 text-primary" />
-              Essai gratuit
             </Button>
           </div>
 
