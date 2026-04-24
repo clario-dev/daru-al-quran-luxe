@@ -51,11 +51,15 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>info@daarualqurane.com</span>
+                <a href="mailto:daaralqurane@gmail.com" className="hover:text-primary transition-colors">daaralqurane@gmail.com</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-primary" />
+                <a href="mailto:daaralquranesoeurs@gmail.com" className="hover:text-primary transition-colors">daaralquranesoeurs@gmail.com</a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>+229 XX XX XX XX</span>
+                <a href="tel:+2290195119920" className="hover:text-primary transition-colors">+229 01 95 11 99 20</a>
               </div>
             </div>
           </div>
