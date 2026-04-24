@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
+import SatisfactionBadge from "@/components/home/SatisfactionBadge";
 import ValuePropositions from "@/components/home/ValuePropositions";
 import CoursesPreview from "@/components/home/CoursesPreview";
 import HowItWorks from "@/components/home/HowItWorks";
@@ -12,6 +13,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
+      <SatisfactionBadge />
       <ValuePropositions />
       <CoursesPreview />
       <HowItWorks />
