@@ -64,14 +64,6 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-border text-foreground px-8 py-6 text-base hover:bg-secondary hover:border-primary/30"
-            >
-              <Play className="mr-2 h-4 w-4 text-primary" />
-              Essai gratuit
-            </Button>
           </div>
 
 
