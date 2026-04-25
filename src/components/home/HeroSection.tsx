@@ -41,16 +41,16 @@ const HeroSection = () => {
           </motion.div>
 
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-            Maîtrisez le{" "}
-            <span className="text-gradient-gold">Coran</span>
+            Apprendre le{" "}
+            <span className="text-gradient-gold">Coran</span> & l'arabe
             <br />
-            & la langue arabe
+            en ligne — France & Europe
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed font-body">
-            Apprendre le Coran et la langue arabe avec des enseignants qualifiés.
+            Cours de Coran, tajwid et langue arabe en direct sur Zoom, en français, avec des enseignants qualifiés.
             <br />
-            Cours en ligne pour adultes & enfants — en français, en direct via Zoom depuis Parakou, Bénin.
+            Pour adultes & enfants en France, Belgique, Suisse et toute l'Europe francophone.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
