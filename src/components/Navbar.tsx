@@ -21,9 +21,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="section-container">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-28">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Daaru Al Qurane" className="h-10 md:h-12 w-auto" />
+            <img src={logo} alt="Daaru Al Qurane — Apprendre le Coran et l'arabe en ligne" className="h-16 md:h-20 lg:h-24 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
