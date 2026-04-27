@@ -6,6 +6,7 @@ import ValuePropositions from "@/components/home/ValuePropositions";
 import CoursesPreview from "@/components/home/CoursesPreview";
 import HowItWorks from "@/components/home/HowItWorks";
 import Testimonials from "@/components/home/Testimonials";
+import FAQ from "@/components/home/FAQ";
 import CTASection from "@/components/home/CTASection";
 
 const Index = () => {
@@ -18,6 +19,7 @@ const Index = () => {
       <HowItWorks />
       <Testimonials />
       <SatisfactionBadge />
+      <FAQ />
       <CTASection />
       <Footer />
     </div>
@@ -25,3 +27,4 @@ const Index = () => {
 };
 
 export default Index;
+

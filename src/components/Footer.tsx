@@ -12,7 +12,7 @@ const Footer = () => {
               <span className="font-display text-lg font-semibold">Daaru Al Qurane</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Éducation en ligne premium de Coran & d'arabe depuis Parakou, Bénin — au service des étudiants du monde entier.
+              Éducation en ligne premium de Coran & d'arabe — au service des étudiants francophones du monde entier.
             </p>
           </div>
 
