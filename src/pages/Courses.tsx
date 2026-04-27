@@ -243,22 +243,30 @@ const LevelCard = ({ l, i }: { l: Level; i: number }) => (
       transition={{ duration: 0.3 }}
       className="group h-full rounded-2xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-glow-gold overflow-hidden flex flex-col"
     >
-      <div className="relative aspect-square overflow-hidden bg-white">
-        <motion.img
-          src={l.image}
-          alt={`${l.level} — ${l.title}`}
-          className="w-full h-full object-contain"
-          loading="lazy"
-          width={800}
-          height={800}
-          whileHover={{ scale: 1.04 }}
-          transition={{ duration: 0.5 }}
-        />
-        <span className="absolute top-3 left-3 text-[10px] font-semibold uppercase tracking-widest text-primary bg-background/85 backdrop-blur-sm px-2.5 py-1 rounded-full">
+      <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-secondary/40 via-background to-secondary/30 border-b border-border">
+        {/* Decorative ornament corners */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-primary/20 rounded-tl-2xl" />
+          <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-primary/20 rounded-tr-2xl" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_60%,hsl(var(--background)/0.4)_100%)]" />
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center p-6">
+          <motion.img
+            src={l.image}
+            alt={`${l.level} — ${l.title}`}
+            className="max-w-full max-h-full w-auto h-auto object-contain drop-shadow-lg"
+            loading="lazy"
+            width={800}
+            height={800}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5 }}
+          />
+        </div>
+        <span className="absolute top-3 left-3 z-10 text-[10px] font-semibold uppercase tracking-widest text-primary bg-background/90 backdrop-blur-sm px-2.5 py-1 rounded-full border border-primary/20">
           {l.level}
         </span>
         {l.highlight && (
-          <span className="absolute top-3 right-3 inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground bg-gradient-gold px-2.5 py-1 rounded-full shadow-glow-gold">
+          <span className="absolute top-3 right-3 z-10 inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-primary-foreground bg-gradient-gold px-2.5 py-1 rounded-full shadow-glow-gold">
             <Sparkles className="h-3 w-3" />
             {l.highlight}
           </span>
