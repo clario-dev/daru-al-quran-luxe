@@ -80,7 +80,7 @@ const BlogPost = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
-      <main className="pt-24 pb-20">
+      <main className="pt-32 pb-20">
         {/* Hero */}
         <div className="relative">
           <div className="absolute inset-0 h-[60vh]">
