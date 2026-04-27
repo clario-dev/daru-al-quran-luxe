@@ -5,7 +5,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { Mail, Phone, MessageCircle } from "lucide-react";
 import mosqueImg from "@/assets/mosque-parakou.jpg";
 import maleTeacherImg from "@/assets/male-teacher.jpg";
 import teacherImg from "@/assets/teacher-portrait.jpg";
@@ -128,22 +128,6 @@ const Contact = () => {
             </AnimatedSection>
           </div>
 
-          {/* Adresse commune */}
-          <AnimatedSection delay={0.3} className="mt-8">
-            <motion.div
-              whileHover={{ x: 5 }}
-              transition={{ duration: 0.2 }}
-              className="flex items-start gap-4 p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/20 transition-all duration-300 max-w-md mx-auto"
-            >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                <MapPin className="h-5 w-5 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-sm mb-0.5">Adresse</h3>
-                <p className="text-sm text-muted-foreground">Parakou, Bénin</p>
-              </div>
-            </motion.div>
-          </AnimatedSection>
         </div>
       </section>
 
