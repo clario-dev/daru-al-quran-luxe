@@ -13,7 +13,7 @@ import arabeNouroniya from "@/assets/courses/arabe-nouroniya.png";
 import arabeMedine1 from "@/assets/courses/arabe-medine-1.png";
 import arabeMedine23 from "@/assets/courses/arabe-medine-2-3.png";
 import arabeMedine4 from "@/assets/courses/arabe-medine-4.png";
-import arabeAjrumiyya from "@/assets/courses/arabe-ajrumiyya.jpg";
+import arabeAjrumiyya from "@/assets/courses/arabe-ajrumiyya.png";
 
 const CHARIOW_URL = "https://daaralquran.mychariow.shop/prd_ijq3ih/checkout";
 
