@@ -219,10 +219,13 @@ const Testimonials = () => {
           style={{ perspective: "1200px" }}
         >
           <div style={{ transform: "rotateX(2deg)" }}>
-            <Marquee items={row1} direction="left" duration={45} />
+            <Marquee items={row1} direction="left" duration={50} />
           </div>
           <div style={{ transform: "rotateX(-2deg)" }}>
-            <Marquee items={row2} direction="right" duration={55} />
+            <Marquee items={row2} direction="right" duration={60} />
+          </div>
+          <div style={{ transform: "rotateX(2deg)" }}>
+            <Marquee items={row3} direction="left" duration={55} />
           </div>
         </div>
       </div>
