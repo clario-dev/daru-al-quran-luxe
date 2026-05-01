@@ -11,13 +11,6 @@ const testimonials = [
     initials: "AM",
   },
   {
-    name: "Ibrahim K.",
-    location: "Lagos, Nigéria",
-    text: "J'ai essayé beaucoup de programmes de Coran en ligne. Daaru Al Qurane est le seul qui donne l'impression d'une vraie salle de classe. La structure et le suivi sont incomparables.",
-    rating: 5,
-    initials: "IK",
-  },
-  {
     name: "Fatima B.",
     location: "Bruxelles, Belgique",
     text: "En tant que convertie, j'étais nerveuse à l'idée d'apprendre l'arabe. Le programme débutant était exactement ce qu'il me fallait — étape par étape, avec beaucoup d'encouragements.",
@@ -59,10 +52,67 @@ const testimonials = [
     rating: 5,
     initials: "AH",
   },
+  {
+    name: "Marwa Adam",
+    location: "Élève de l'institut",
+    text: "Ustadh Ahmad Daoud est un enseignant passionné et bienveillant, qui transmet ses connaissances avec clarté et enthousiasme. Sa pédagogie inclusive crée un cadre de confiance où chaque élève peut progresser à son rythme. Ses conseils ont profondément transformé ma relation avec Allah.",
+    rating: 5,
+    initials: "MA",
+  },
+  {
+    name: "Zainab Fafana",
+    location: "Élève de l'institut",
+    text: "Son enseignement est clair, structuré et va bien au-delà des simples savoirs scolaires : il nous apprend des principes essentiels pour la vie. Grâce à lui, j'ai maîtrisé les bases du Tawhid et considérablement amélioré ma récitation et ma prononciation en arabe. Je recommande sans hésitation.",
+    rating: 5,
+    initials: "ZF",
+  },
+  {
+    name: "Soumayatou Fafana",
+    location: "Élève de l'institut",
+    text: "Une méthode d'enseignement solide et respectueuse. Ce qui m'a le plus marquée, c'est la manière dont il traite ses élèves comme des frères et sœurs, avec un respect sincère. Ses cours m'ont permis de comprendre et d'appliquer concrètement le Tawhid dans ma vie quotidienne.",
+    rating: 5,
+    initials: "SF",
+  },
+  {
+    name: "Adama Seibou",
+    location: "Élève de l'institut",
+    text: "C'est un enseignant qui maîtrise son sujet avec rigueur et captive instantanément l'attention. Partant de zéro en Tawhid, j'ai aujourd'hui une compréhension solide de cette discipline — et j'ai appris à surpasser mes craintes grâce à sa pédagogie exigeante et inspirante.",
+    rating: 5,
+    initials: "AS",
+  },
+  {
+    name: "Maïmounath Garba",
+    location: "Élève de l'institut",
+    text: "Une sincérité dans l'enseignement qui fait toute la différence. Ses conseils m'ont aidée à progresser dans ma vie personnelle et à affermir ma foi. Un ustadh que je recommande chaleureusement à quiconque souhaite s'initier à l'Aqida.",
+    rating: 5,
+    initials: "MG",
+  },
+  {
+    name: "Nafissa Adam",
+    location: "Élève de l'institut",
+    text: "Il enseigne avec une qualité remarquable, masha'Allah. Ses rappels et son enseignement de la religion ont été pour moi une source de progrès réels. À ceux qui hésitent encore : changez d'avis, vous avez devant vous l'un des meilleurs enseignants.",
+    rating: 5,
+    initials: "NA",
+  },
+  {
+    name: "Moussa Megnidro",
+    location: "Élève de l'institut",
+    text: "Un enseignement simple, profond et empreint de sagesse. Grâce à lui, j'ai mémorisé le Coran, les 40 hadiths de l'Imam An-Nawawi ainsi que plusieurs textes fondamentaux de l'Islam. À quiconque envisage de s'inscrire : ayez la détermination, le reste suivra.",
+    rating: 5,
+    initials: "MM",
+  },
+  {
+    name: "Mou'anz A. Daoud",
+    location: "Élève de l'institut",
+    text: "Un enseignant très professionnel, d'une sincérité exemplaire. Les récits qu'il partage sur les savants de l'Islam sont une véritable source de motivation. Ses conseils orientent et élèvent véritablement.",
+    rating: 5,
+    initials: "MD",
+  },
 ];
 
-const row1 = testimonials.slice(0, 4);
-const row2 = testimonials.slice(4, 8);
+const row1 = testimonials.slice(0, 5);
+const row2 = testimonials.slice(5, 10);
+const row3 = testimonials.slice(10, 15);
 
 const TestimonialCard = ({ t }: { t: typeof testimonials[0] }) => (
   <div className="group relative w-[340px] sm:w-[400px] shrink-0 mx-3">
@@ -169,10 +219,13 @@ const Testimonials = () => {
           style={{ perspective: "1200px" }}
         >
           <div style={{ transform: "rotateX(2deg)" }}>
-            <Marquee items={row1} direction="left" duration={45} />
+            <Marquee items={row1} direction="left" duration={50} />
           </div>
           <div style={{ transform: "rotateX(-2deg)" }}>
-            <Marquee items={row2} direction="right" duration={55} />
+            <Marquee items={row2} direction="right" duration={60} />
+          </div>
+          <div style={{ transform: "rotateX(2deg)" }}>
+            <Marquee items={row3} direction="left" duration={55} />
           </div>
         </div>
       </div>

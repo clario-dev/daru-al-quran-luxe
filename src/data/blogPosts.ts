@@ -30,16 +30,20 @@ import heroMixed from "@/assets/hero-mixed.png";
 
 const CTA = `
 
-## Passez à l'action dès aujourd'hui
+[[CTA]]
+`;
 
-Vous avez lu, vous avez compris l'enjeu : maintenant, agissez. Chaque jour qui passe sans étudier le Coran ou la langue arabe est un jour de retard sur l'objectif que vous vous êtes fixé. À **Daaru Al Qurane**, nous vous accompagnons en direct, en français, avec des enseignants qualifiés sur la voie des pieux prédécesseurs.
+// Citation authentique injectée au début de chaque article (Coran ou Hadith en arabe + traduction).
+const AUTH_INTRO = `
 
-- ✅ Cours en direct sur Zoom, adaptés à votre niveau
-- ✅ Hommes, femmes et enfants — sections séparées
-- ✅ Méthodologie claire, progressive, fidèle à la Sunnah
-- ✅ Garantie satisfait ou remboursé sous 7 jours
+> AR: ﴿ يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ ﴾
+> TR: Allah élèvera en degrés ceux d'entre vous qui ont cru et ceux qui ont reçu la science.
+> REF: Coran, sourate Al-Mujâdala (58), verset 11.
 
-👉 **[Inscrivez-vous maintenant à Daaru Al Qurane](https://daaralquran.mychariow.shop/prd_ijq3ih/checkout)** et commencez votre parcours dès cette semaine, depuis la France, la Belgique, la Suisse ou n'importe où en Europe.
+> AR: « مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ »
+> TR: Quiconque emprunte un chemin par lequel il recherche une science, Allah lui facilite par cela un chemin vers le Paradis.
+> REF: Rapporté par Mouslim (n°2699), d'après Abou Hourayra رضي الله عنه.
+
 `;
 
 export const blogPosts: BlogPost[] = [
@@ -804,7 +808,7 @@ Le juz 'amma est le 30e et dernier juz du Coran. Il rassemble la plupart des sou
 
 ${CTA}`,
   },
-];
+].map((p) => ({ ...p, content: AUTH_INTRO + p.content }));
 
 export const blogCategories = Array.from(new Set(blogPosts.map((p) => p.category)));
 

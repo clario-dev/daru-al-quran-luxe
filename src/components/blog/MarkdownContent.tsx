@@ -1,16 +1,22 @@
-// Mini renderer markdown-lite : titres ##, listes -, paragraphes, gras **, liens [txt](url).
-// Léger et sans dépendance pour ne pas alourdir le bundle.
+// Mini renderer markdown-lite : titres ##/###, listes -, paragraphes, gras **, liens [txt](url).
+// Plus :
+//  - [[CTA]]                             → bouton d'inscription (URL masquée)
+//  - > AR: ... texte arabe ...           → bloc citation arabe (RTL)
+//  - > TR: ... traduction française ...  → bloc traduction
+//  - > REF: ... référence ...            → ligne de référence (savants/source)
 
 import { Fragment } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, BookMarked } from "lucide-react";
+
+const CHARIOW_URL = "https://daaralquran.mychariow.shop/prd_ijq3ih/checkout";
 
 const renderInline = (text: string): React.ReactNode[] => {
   const nodes: React.ReactNode[] = [];
   let remaining = text;
   let key = 0;
 
-  // Replace links [text](url)
   const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/;
-  // Replace bold **text**
   const boldRegex = /\*\*([^*]+)\*\*/;
 
   while (remaining.length > 0) {
@@ -41,17 +47,33 @@ const renderInline = (text: string): React.ReactNode[] => {
     }
 
     if (kind === "link" && linkMatch) {
-      nodes.push(
-        <a
-          key={key++}
-          href={linkMatch[2]}
-          target={linkMatch[2].startsWith("http") ? "_blank" : undefined}
-          rel={linkMatch[2].startsWith("http") ? "noopener noreferrer" : undefined}
-          className="text-primary underline underline-offset-2 hover:opacity-80"
-        >
-          {linkMatch[1]}
-        </a>
-      );
+      // Hide chariow URLs: render as styled CTA button instead of visible href text
+      const url = linkMatch[2];
+      const label = linkMatch[1];
+      const isChariow = url.includes("mychariow.shop");
+      if (isChariow) {
+        nodes.push(
+          <span key={key++} className="inline-block my-1">
+            <Button asChild size="sm" className="bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {label} <ArrowRight className="ml-1 h-4 w-4" />
+              </a>
+            </Button>
+          </span>
+        );
+      } else {
+        nodes.push(
+          <a
+            key={key++}
+            href={url}
+            target={url.startsWith("http") ? "_blank" : undefined}
+            rel={url.startsWith("http") ? "noopener noreferrer" : undefined}
+            className="text-primary underline underline-offset-2 hover:opacity-80"
+          >
+            {label}
+          </a>
+        );
+      }
       remaining = remaining.slice(nextIdx + linkMatch[0].length);
     } else if (kind === "bold" && boldMatch) {
       nodes.push(
@@ -94,7 +116,50 @@ const MarkdownContent = ({ content }: Props) => {
   for (const rawLine of lines) {
     const line = rawLine.trimEnd();
 
-    if (line.startsWith("### ")) {
+    if (line.trim() === "[[CTA]]") {
+      flushList();
+      blocks.push(
+        <div key={`cta-${blockKey++}`} className="my-10 p-6 md:p-8 rounded-2xl border border-primary/30 bg-gradient-card shadow-glow-gold text-center">
+          <h3 className="font-display text-2xl md:text-3xl font-semibold mb-2">Passez à l'action dès aujourd'hui</h3>
+          <p className="text-muted-foreground mb-5 max-w-xl mx-auto">
+            Cours en direct sur Zoom · Hommes, femmes et enfants (sections séparées) · Méthodologie des pieux prédécesseurs · Garantie satisfait ou remboursé sous 7 jours.
+          </p>
+          <Button asChild size="lg" className="bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
+            <a href={CHARIOW_URL} target="_blank" rel="noopener noreferrer">
+              S'inscrire à Daaru Al'Qurane <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+        </div>
+      );
+    } else if (line.startsWith("> AR:")) {
+      flushList();
+      blocks.push(
+        <p
+          key={`ar-${blockKey++}`}
+          dir="rtl"
+          lang="ar"
+          className="my-3 text-2xl md:text-3xl leading-loose text-foreground font-medium text-right"
+          style={{ fontFamily: "'Amiri Quran', 'Scheherazade New', serif" }}
+        >
+          {line.slice(5).trim()}
+        </p>
+      );
+    } else if (line.startsWith("> TR:")) {
+      flushList();
+      blocks.push(
+        <blockquote key={`tr-${blockKey++}`} className="my-3 border-l-4 border-primary pl-4 italic text-foreground/90 leading-relaxed">
+          « {renderInline(line.slice(5).trim())} »
+        </blockquote>
+      );
+    } else if (line.startsWith("> REF:")) {
+      flushList();
+      blocks.push(
+        <p key={`ref-${blockKey++}`} className="text-xs text-muted-foreground mb-6 flex items-center gap-1.5">
+          <BookMarked className="h-3 w-3 text-primary" />
+          {renderInline(line.slice(6).trim())}
+        </p>
+      );
+    } else if (line.startsWith("### ")) {
       flushList();
       blocks.push(
         <h3 key={`h3-${blockKey++}`} className="font-display text-xl font-semibold mt-8 mb-3 text-foreground">
@@ -104,13 +169,12 @@ const MarkdownContent = ({ content }: Props) => {
     } else if (line.startsWith("## ")) {
       flushList();
       blocks.push(
-        <h2 key={`h2-${blockKey++}`} className="font-display text-2xl md:text-3xl font-bold mt-10 mb-4 text-gradient-gold">
+        <h2 key={`h2-${blockKey++}`} className="font-display text-2xl md:text-3xl font-semibold mt-10 mb-4 text-gradient-gold">
           {renderInline(line.slice(3))}
         </h2>
       );
     } else if (/^\d+\.\s/.test(line)) {
       flushList();
-      // ordered list as paragraph for simplicity
       blocks.push(
         <p key={`ol-${blockKey++}`} className="text-muted-foreground leading-relaxed my-2">
           {renderInline(line)}
