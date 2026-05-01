@@ -110,8 +110,9 @@ const testimonials = [
   },
 ];
 
-const row1 = testimonials.slice(0, 4);
-const row2 = testimonials.slice(4, 8);
+const row1 = testimonials.slice(0, 5);
+const row2 = testimonials.slice(5, 10);
+const row3 = testimonials.slice(10, 15);
 
 const TestimonialCard = ({ t }: { t: typeof testimonials[0] }) => (
   <div className="group relative w-[340px] sm:w-[400px] shrink-0 mx-3">
