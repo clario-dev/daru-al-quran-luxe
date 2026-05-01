@@ -7,7 +7,8 @@ import logo from "@/assets/logo.png";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
-  { href: "/courses", label: "Cours" },
+  { href: "/courses/coran", label: "Cours de Coran" },
+  { href: "/courses/arabe", label: "Cours d'Arabe" },
   { href: "/store", label: "Boutique" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "À propos" },
