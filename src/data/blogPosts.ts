@@ -808,7 +808,7 @@ Le juz 'amma est le 30e et dernier juz du Coran. Il rassemble la plupart des sou
 
 ${CTA}`,
   },
-];
+].map((p) => ({ ...p, content: AUTH_INTRO + p.content }));
 
 export const blogCategories = Array.from(new Set(blogPosts.map((p) => p.category)));
 
