@@ -808,6 +808,105 @@ Le juz 'amma est le 30e et dernier juz du Coran. Il rassemble la plupart des sou
 
 ${CTA}`,
   },
+  {
+    slug: "le-meilleur-est-celui-qui-apprend-le-coran-et-lenseigne",
+    title: "« Le meilleur d'entre vous est celui qui apprend le Coran et l'enseigne »",
+    description: "Méditation sur le hadith de 'Outhmân : pourquoi l'apprentissage du Coran doit précéder toute prise de parole religieuse. Inscrivez-vous à Daaru Al'Qurane.",
+    keywords: ["meilleur d'entre vous Coran", "apprendre et enseigner le Coran", "hadith apprentissage Coran", "talab al-ilm Coran"],
+    category: "Apprentissage du Coran",
+    readingTime: 9,
+    publishedAt: "2026-03-02",
+    cover: quranDesk,
+    excerpt: "Le Prophète ﷺ a placé l'apprentissage du Coran au sommet des actes. Pourquoi cette priorité ? Et que dit-elle de notre époque où chacun parle sans avoir appris ?",
+    content: `## Le hadith fondateur
+
+> AR: « خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ »
+> TR: Le meilleur d'entre vous est celui qui apprend le Coran et l'enseigne.
+> REF: Rapporté par Al-Boukhari (n°5027), d'après 'Outhmân ibn 'Affân رضي الله عنه.
+
+Ce hadith est l'un des plus connus, et pourtant l'un des moins appliqués. Le Prophète ﷺ ne dit pas « le meilleur d'entre vous est celui qui débat », ni « celui qui réfute », ni « celui qui authentifie les hadiths ». Il dit : **celui qui apprend le Coran et l'enseigne**.
+
+C'est une hiérarchie claire. Avant tout savoir secondaire, il y a la Parole d'Allah. Avant toute fatwa, il y a la lecture correcte. Avant toute prise de parole publique, il y a la mémorisation et la compréhension.
+
+## Le constat de notre époque
+
+À l'image de ce qu'a rapporté un grand nombre de savants contemporains, on constate aujourd'hui un phénomène inquiétant : des **prêcheurs** (du'ât) et des **débutants en sciences islamiques** se précipitent au premier rang de la da'wah, multiplient les réponses aux questions des gens, donnent leur avis sur les divergences entre savants — alors qu'ils ne savent pas même réciter Sourate Al-Fâtiha avec le tajwid correct.
+
+On les entend confondre :
+
+- le **sîn** avec le **sâd**
+- le **dâl** avec le **dhâd**
+- le **tâ** avec le **tâ' emphatique**
+- le **dhâl** avec le **zây**
+
+Et pourtant ils prennent la parole, ils tranchent, ils disent : *« Mon avis est que... »*, *« L'avis le plus fort pour moi est... »*. C'est une inversion grave de l'ordre du savoir.
+
+## Le rappel du Cheikh Al-Albani رحمه الله
+
+Le Cheikh Mouhammad Nâsir ad-Dîn Al-Albani رحمه الله écrit dans *As-Silsila As-Sahiha* (n°1173), en commentant ce hadith :
+
+> AR: ﴿ فَذَكِّرْ بِالْقُرْآنِ مَن يَخَافُ وَعِيدِ ﴾
+> TR: Rappelle donc, par le Coran, celui qui craint Ma menace.
+> REF: Coran, sourate Qâf (50), verset 45.
+
+Le Cheikh insiste : la **première** chose que doit faire l'étudiant en sciences islamiques, c'est apprendre le Coran par cœur. Pourquoi ? Pour que la mention des versets lui soit facile lorsqu'il enseigne, prêche ou rappelle ; pour que ses paroles soient ancrées dans la révélation, et non dans son propre avis.
+
+Et il ajoute, avec gravité : *« Je demande refuge auprès d'Allah de l'ostentation et de l'envie d'avoir une réputation et d'être célèbre ! »*
+
+## Trois maladies à fuir
+
+L'article qui inspire ces lignes met en garde contre trois maladies répandues :
+
+1. **Parler sans avoir appris.** On commente les savants avant d'avoir mémorisé un seul juz du Coran.
+2. **Préférer la divergence à l'unanimité.** On entend rarement parler des questions sur lesquelles les savants sont unanimes ; on se précipite sur celles où ils divergent — par goût du débat, non par recherche de la vérité.
+3. **Chercher la réputation.** Le ribâ' (l'ostentation) et le su'mah (la recherche de la renommée) ruinent l'œuvre.
+
+> AR: « إِنَّ اللَّهَ لَا يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ، وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ »
+> TR: Allah ne regarde ni vos apparences ni vos biens, mais Il regarde vos cœurs et vos œuvres.
+> REF: Rapporté par Mouslim (n°2564).
+
+## La voie sereine : commencer par le Coran
+
+Le chemin proposé par les pieux prédécesseurs est simple, ancien, éprouvé :
+
+- D'abord, **apprendre à lire le Coran** correctement (Nourania, Médine ou méthode équivalente)
+- Ensuite, **maîtriser le tajwid** auprès d'un enseignant
+- Puis, **mémoriser** progressivement (juz 'amma, Tabarak, puis remonter vers le début)
+- En parallèle, **comprendre l'arabe** pour ne plus dépendre des traductions
+- Enfin seulement, étudier les autres sciences (fiqh, aqida, hadith) sur cette base
+
+Celui qui suit cet ordre construit sur du roc. Celui qui l'inverse construit sur du sable.
+
+## Et pour celui qui n'a jamais commencé ?
+
+Il est très courant en France, en Belgique, en Suisse, qu'un musulman adulte arrive à 25, 30, 40 ans sans n'avoir jamais appris à lire le Coran correctement. **Ce n'est pas une honte. La honte serait de continuer à fuir.**
+
+Le Prophète ﷺ a dit :
+
+> AR: « مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ »
+> TR: Quiconque emprunte un chemin par lequel il recherche une science, Allah lui facilite par cela un chemin vers le Paradis.
+> REF: Rapporté par Mouslim (n°2699).
+
+## Ce que nous proposons à Daaru Al'Qurane
+
+Notre institut a été pensé exactement pour cela : permettre à un francophone, où qu'il vive, de :
+
+- **Apprendre à lire** le Coran (initiation, Nourania)
+- **Perfectionner son tajwid** avec un enseignant qui corrige
+- **Mémoriser** progressivement, à son rythme, jusqu'à l'**Ijazah de Hafs 'an 'Asim**
+- **Comprendre la langue arabe** par les tomes de Médine
+- En **direct sur Zoom**, en sections séparées hommes / femmes / enfants
+
+Sur la voie des pieux prédécesseurs, sans innovation, sans précipitation, et sans humiliation : on commence où l'on est, et on avance.
+
+## Conclusion
+
+Le hadith de 'Outhmân رضي الله عنه est une invitation, pas un reproche. Le Prophète ﷺ vous appelle à devenir **le meilleur** — non par votre éloquence, ni par votre nombre d'abonnés, mais par votre lien réel avec la Parole d'Allah.
+
+Apprenez le Coran. Puis enseignez-le. Et qu'Allah accepte de nous tous.
+
+${CTA}`,
+  },
 ].map((p) => ({ ...p, content: AUTH_INTRO + p.content }));
 
 export const blogCategories = Array.from(new Set(blogPosts.map((p) => p.category)));
