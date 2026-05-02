@@ -40,7 +40,7 @@ const BlogPost = () => {
       link.setAttribute("rel", "canonical");
       document.head.appendChild(link);
     }
-    link.setAttribute("href", `https://daaru-alqurane.com/blog/${post.slug}`);
+    link.setAttribute("href", `https://daarualqurane.com/blog/${post.slug}`);
 
     // JSON-LD BlogPosting
     const existing = document.getElementById("ld-blogpost");
@@ -60,9 +60,9 @@ const BlogPost = () => {
       publisher: {
         "@type": "Organization",
         name: "Daaru Al Qurane",
-        logo: { "@type": "ImageObject", url: "https://daaru-alqurane.com/favicon.png" },
+        logo: { "@type": "ImageObject", url: "https://daarualqurane.com/favicon.png" },
       },
-      mainEntityOfPage: `https://daaru-alqurane.com/blog/${post.slug}`,
+      mainEntityOfPage: `https://daarualqurane.com/blog/${post.slug}`,
     });
     document.head.appendChild(script);
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://daaru-alqurane.com/sitemap.xml
+Sitemap: https://daarualqurane.com/sitemap.xml
