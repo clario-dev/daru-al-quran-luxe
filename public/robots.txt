@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /privacy
+Disallow: /cgv
+Disallow: /cookies
 
 Sitemap: https://daarualqurane.com/sitemap.xml
