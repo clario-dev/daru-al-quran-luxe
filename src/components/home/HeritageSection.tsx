@@ -10,7 +10,7 @@ const items = [
     img: sadaqahImg,
     title: "Une aumône continue",
     arabic: "صَدَقَةٌ جَارِيَةٌ",
-    desc: "Soutenir un enseignement authentique du Coran, c'est planter une sadaqah dont les fruits ne s'arrêtent jamais.",
+    desc: "C'est-à-dire que la personne fait aumône d'une chose qui demeure. La meilleure de ces choses est les mosquées : la construction des mosquées est une aumône continue, car la récompense de celui qui les bâtit demeure tant qu'elles existent, nuits et jours. Soutenir un enseignement authentique du Coran s'inscrit dans cette même tradition.",
   },
   {
     img: ilmImg,
