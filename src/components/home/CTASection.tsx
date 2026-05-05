@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -31,8 +32,15 @@ const CTASection = () => {
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
             Commencez votre parcours <span className="text-gradient-gold">aujourd'hui</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-10">
-            Rejoignez des centaines d'étudiants à travers le monde qui transforment leur relation avec le Coran. Votre premier cours est gratuit.
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-4">
+            Rejoignez des centaines d'étudiants à travers le monde qui transforment leur relation avec le Coran et la langue arabe.
+          </p>
+          <p className="text-base text-foreground mb-10">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/40 bg-primary/10">
+              <span className="text-xs uppercase tracking-wider text-primary font-semibold">Inscription</span>
+              <span className="font-display text-xl font-bold text-gradient-gold">10 €</span>
+              <span className="text-xs text-muted-foreground">— frais d'inscription unique</span>
+            </span>
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
@@ -41,16 +49,17 @@ const CTASection = () => {
               className="bg-gradient-gold text-primary-foreground font-semibold px-10 py-6 text-base hover:opacity-90 shadow-glow-gold"
             >
               <a href="https://daaralquran.mychariow.shop/prd_ijq3ih/checkout" target="_blank" rel="noopener noreferrer">
-                S'inscrire
+                S'inscrire — 10 €
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
             <Button
+              asChild
               variant="outline"
               size="lg"
               className="border-border px-10 py-6 text-base hover:border-primary/30"
             >
-              Voir les cours
+              <Link to="/courses/coran">Voir les cours</Link>
             </Button>
           </div>
         </AnimatedSection>
