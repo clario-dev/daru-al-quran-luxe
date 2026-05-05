@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import useNoIndex from "@/hooks/useNoIndex";
 
 const Cookies = () => {
+  useNoIndex("Politique de cookies", "Politique de cookies (UE) de Daaru Al'Qurane — RGPD et ePrivacy.");
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

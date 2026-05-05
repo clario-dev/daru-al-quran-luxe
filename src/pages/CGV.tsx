@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import useNoIndex from "@/hooks/useNoIndex";
 
 const CGV = () => {
+  useNoIndex("Conditions Générales de Vente", "Conditions Générales de Vente de Daaru Al'Qurane.");
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

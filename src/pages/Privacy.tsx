@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import useNoIndex from "@/hooks/useNoIndex";
 
 const Privacy = () => {
+  useNoIndex("Politique de confidentialité", "Politique de confidentialité de Daaru Al'Qurane — protection des données et RGPD.");
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
