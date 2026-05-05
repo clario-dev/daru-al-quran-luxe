@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import useNoIndex from "@/hooks/useNoIndex";
 
 const Cookies = () => {
+  useNoIndex("Politique de cookies", "Politique de cookies (UE) de Daaru Al'Qurane — RGPD et ePrivacy.");
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -39,7 +41,7 @@ const Cookies = () => {
             </section>
             <section>
               <h2 className="font-display text-2xl text-foreground mb-3">5. Contact</h2>
-              <p>Pour toute question relative à cette politique : <a href="mailto:daaralqurane@gmail.com" className="text-primary hover:underline">daaralqurane@gmail.com</a></p>
+              <p>Pour toute question relative à cette politique : <a href="mailto:contact@daarualqurane.com" className="text-primary hover:underline">contact@daarualqurane.com</a></p>
             </section>
           </div>
         </div>

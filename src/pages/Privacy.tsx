@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import useNoIndex from "@/hooks/useNoIndex";
 
 const Privacy = () => {
+  useNoIndex("Politique de confidentialité", "Politique de confidentialité de Daaru Al'Qurane — protection des données et RGPD.");
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -13,7 +15,7 @@ const Privacy = () => {
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <section>
               <h2 className="font-display text-2xl text-foreground mb-3">1. Responsable du traitement</h2>
-              <p>L'institut <strong>Daaru Al'Qurane</strong> est responsable du traitement des données personnelles collectées via le site. Pour toute question : <a href="mailto:daaralqurane@gmail.com" className="text-primary hover:underline">daaralqurane@gmail.com</a>.</p>
+              <p>L'institut <strong>Daaru Al'Qurane</strong> est responsable du traitement des données personnelles collectées via le site. Pour toute question : <a href="mailto:contact@daarualqurane.com" className="text-primary hover:underline">contact@daarualqurane.com</a>.</p>
             </section>
             <section>
               <h2 className="font-display text-2xl text-foreground mb-3">2. Données collectées</h2>
@@ -38,7 +40,7 @@ const Privacy = () => {
             </section>
             <section>
               <h2 className="font-display text-2xl text-foreground mb-3">6. Vos droits</h2>
-              <p>Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité. Pour les exercer : <a href="mailto:daaralqurane@gmail.com" className="text-primary hover:underline">daaralqurane@gmail.com</a>. Vous pouvez également déposer une réclamation auprès de la CNIL (France) ou de l'autorité de protection des données de votre pays.</p>
+              <p>Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité. Pour les exercer : <a href="mailto:contact@daarualqurane.com" className="text-primary hover:underline">contact@daarualqurane.com</a>. Vous pouvez également déposer une réclamation auprès de la CNIL (France) ou de l'autorité de protection des données de votre pays.</p>
             </section>
             <section>
               <h2 className="font-display text-2xl text-foreground mb-3">7. Sécurité</h2>

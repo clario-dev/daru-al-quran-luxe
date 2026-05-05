@@ -81,11 +81,11 @@ const Footer = () => {
             <div className="flex flex-col gap-3 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <a href="mailto:daaralqurane@gmail.com" className="hover:text-primary transition-colors">daaralqurane@gmail.com</a>
+                <a href="mailto:contact@daarualqurane.com" className="hover:text-primary transition-colors">contact@daarualqurane.com</a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary" />
-                <a href="mailto:daaralquranesoeurs@gmail.com" className="hover:text-primary transition-colors">daaralquranesoeurs@gmail.com</a>
+                <a href="mailto:contact-soeurs@daarualqurane.com" className="hover:text-primary transition-colors">contact-soeurs@daarualqurane.com</a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />

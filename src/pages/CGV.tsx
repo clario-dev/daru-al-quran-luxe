@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import useNoIndex from "@/hooks/useNoIndex";
 
 const CGV = () => {
+  useNoIndex("Conditions Générales de Vente", "Conditions Générales de Vente de Daaru Al'Qurane.");
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -58,7 +60,7 @@ const CGV = () => {
             </section>
             <section>
               <h2 className="font-display text-2xl text-foreground mb-3">10. Contact</h2>
-              <p>Pour toute question : <a href="mailto:daaralqurane@gmail.com" className="text-primary hover:underline">daaralqurane@gmail.com</a></p>
+              <p>Pour toute question : <a href="mailto:contact@daarualqurane.com" className="text-primary hover:underline">contact@daarualqurane.com</a></p>
             </section>
           </div>
         </div>
