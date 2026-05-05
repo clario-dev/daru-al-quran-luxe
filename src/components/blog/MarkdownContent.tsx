@@ -7,7 +7,7 @@
 
 import { Fragment } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BookMarked } from "lucide-react";
+import { ArrowRight, BookMarked, Download } from "lucide-react";
 
 const CHARIOW_URL = "https://daaralquran.mychariow.shop/prd_ijq3ih/checkout";
 
@@ -126,11 +126,33 @@ const MarkdownContent = ({ content }: Props) => {
           </p>
           <Button asChild size="lg" className="bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
             <a href={CHARIOW_URL} target="_blank" rel="noopener noreferrer">
-              S'inscrire à Daaru Al'Qurane <ArrowRight className="ml-2 h-4 w-4" />
+              S'inscrire à Daaru Al'Qurane — 10 € <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </Button>
         </div>
       );
+    } else if (line.startsWith("[[DOWNLOAD:")) {
+      flushList();
+      // Format: [[DOWNLOAD:/path/to/file.pdf|Title|Subtitle]]
+      const match = line.trim().match(/^\[\[DOWNLOAD:([^|]+)\|([^|]+)\|([^\]]+)\]\]$/);
+      if (match) {
+        const [, url, title, subtitle] = match;
+        blocks.push(
+          <div key={`dl-${blockKey++}`} className="my-10 p-6 md:p-8 rounded-2xl border border-primary/40 bg-gradient-to-br from-primary/10 to-primary/5 text-center">
+            <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-primary/15 flex items-center justify-center">
+              <Download className="h-7 w-7 text-primary" />
+            </div>
+            <h3 className="font-display text-2xl font-semibold mb-2">{title}</h3>
+            <p className="text-muted-foreground mb-5 max-w-xl mx-auto">{subtitle}</p>
+            <Button asChild size="lg" className="bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
+              <a href={url} download target="_blank" rel="noopener noreferrer">
+                Télécharger gratuitement (PDF) <Download className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+            <p className="text-xs text-muted-foreground mt-3">Format PDF · Lecture sur tout appareil · Aucun email demandé</p>
+          </div>
+        );
+      }
     } else if (line.startsWith("> AR:")) {
       flushList();
       blocks.push(
