@@ -47,7 +47,7 @@ const ValuePropositions = () => {
               Une académie bâtie pour <span className="text-gradient-gold">l'excellence</span>
             </h2>
             <p className="text-muted-foreground max-w-xl">
-              Chaque détail est conçu pour vous accompagner dans votre parcours coranique.
+              Chaque détail est conçu pour vous accompagner dans votre parcours d'apprentissage du Coran et de la langue arabe.
             </p>
           </AnimatedSection>
 
