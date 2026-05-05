@@ -114,11 +114,14 @@ const HeroSection = () => {
                 className="bg-gradient-gold text-primary-foreground font-semibold px-8 py-6 text-base hover:opacity-90 shadow-glow-gold transition-all duration-300 hover:shadow-[0_0_80px_-10px_hsl(43_72%_55%_/_0.4)]"
               >
                 <a href="https://daaralquran.mychariow.shop/prd_ijq3ih/checkout" target="_blank" rel="noopener noreferrer">
-                  S'inscrire maintenant
+                  S'inscrire — 10 €
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
             </div>
+            <p className="mt-3 text-xs text-muted-foreground text-center lg:text-left">
+              Frais d'inscription unique <span className="text-primary font-semibold">10 €</span> · Garantie satisfait ou remboursé sous 7 jours
+            </p>
 
             <motion.div
               initial={{ opacity: 0 }}
