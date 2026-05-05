@@ -107,7 +107,7 @@ ${CTA}`,
     category: "Langue arabe",
     readingTime: 8,
     publishedAt: "2026-01-15",
-    cover: studentReading,
+    cover: maleStudent,
     excerpt: "Débuter l'arabe peut sembler intimidant. Voici un parcours clair, étape par étape, pour passer de zéro à la lecture fluide en quelques mois.",
     content: `## Pourquoi apprendre l'arabe en ligne ?
 
@@ -772,7 +772,7 @@ ${CTA}`,
     category: "Mémorisation",
     readingTime: 7,
     publishedAt: "2026-02-26",
-    cover: studentReading,
+    cover: quranDesk,
     excerpt: "Pour prier en variant ses récitations, mémoriser le juz 'amma est la priorité absolue. Voici l'ordre conseillé et les mérites de chaque sourate.",
     content: `## Pourquoi commencer par le juz 'amma ?
 
