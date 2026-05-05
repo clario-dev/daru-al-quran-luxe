@@ -907,6 +907,208 @@ Apprenez le Coran. Puis enseignez-le. Et qu'Allah accepte de nous tous.
 
 ${CTA}`,
   },
+  {
+    slug: "importance-invocations-matin-soir-musulman",
+    title: "L'importance des invocations du matin et du soir",
+    description: "Pourquoi le musulman a besoin des invocations (adhkâr) du matin et du soir : preuves du Coran et de la Sounnah, mérites, et livret PDF gratuit à télécharger.",
+    keywords: ["invocations matin soir", "adhkar matin soir", "rappel d'Allah", "dhikr musulman", "livret invocations PDF"],
+    category: "Sciences religieuses",
+    readingTime: 8,
+    publishedAt: "2026-05-04",
+    cover: maleTeacher,
+    excerpt: "Le musulman a besoin de l'invocation à chaque instant. Découvrez pourquoi les adhkâr du matin et du soir sont une porte ouverte vers le Paradis — et téléchargez gratuitement notre livret PDF complet.",
+    content: `## Le besoin permanent du musulman pour l'invocation
+
+Le musulman a besoin de l'invocation à **chaque instant** : pour obtenir un bien qui lui servira dans ce monde et dans l'autre, et pour repousser un mal qui lui nuira dans ce monde et dans l'autre.
+
+Celui à qui Allah donne la capacité de **toujours L'invoquer**, Allah lui aura ouvert une porte vers le Paradis. Ce n'est pas une parole en l'air : c'est le résumé même de la vie spirituelle du croyant.
+
+> AR: ﴿ وَقَالَ رَبُّكُمُ ادْعُونِي أَسْتَجِبْ لَكُمْ ﴾
+> TR: Et votre Seigneur dit : « Invoquez-Moi, Je vous répondrai. »
+> REF: Coran, sourate Ghâfir (40), verset 60.
+
+## Le hadith du « meilleur acte » : c'est l'évocation d'Allah
+
+De nombreux hadiths exhortent à cela, dont cette parole majestueuse du Prophète ﷺ :
+
+> AR: « أَلَا أُنَبِّئُكُمْ بِخَيْرِ أَعْمَالِكُمْ وَأَزْكَاهَا عِنْدَ مَلِيكِكُمْ، وَأَرْفَعِهَا فِي دَرَجَاتِكُمْ، وَخَيْرٍ لَكُمْ مِنْ إِنْفَاقِ الذَّهَبِ وَالْوَرِقِ، وَخَيْرٍ لَكُمْ مِنْ أَنْ تَلْقَوْا عَدُوَّكُمْ فَتَضْرِبُوا أَعْنَاقَهُمْ وَيَضْرِبُوا أَعْنَاقَكُمْ ؟ » قَالُوا: بَلَى يَا رَسُولَ اللَّهِ، قَالَ: « ذِكْرُ اللَّهِ »
+> TR: « N'aimeriez-vous pas que je vous informe de la meilleure de vos œuvres, la plus pure auprès de votre Seigneur, celle qui élève le plus haut en degré, meilleure pour vous que le don de votre or et de votre argent, meilleure pour vous que d'affronter vos ennemis et de leur trancher la tête — et qu'eux tranchent la vôtre ? » — « Mais oui, ô Messager d'Allah ! » répondirent-ils. Il dit : « C'est l'évocation d'Allah. »
+> REF: Rapporté par At-Tirmidhî (n°3377), authentifié.
+
+Méditez bien : le Prophète ﷺ place le **dhikr** au-dessus du jihad par les armes et du don d'or et d'argent. Ce n'est pas un acte secondaire : c'est le **plus pur** des actes auprès d'Allah.
+
+## La parole de Cheikh al-Islâm Ibn Taymiyya رحمه الله
+
+L'imam Ibn Taymiyya a dit une parole devenue célèbre :
+
+> AR: « الذِّكْرُ لِلْقَلْبِ مِثْلُ الْمَاءِ لِلسَّمَكِ، فَكَيْفَ يَكُونُ حَالُ السَّمَكِ إِذَا فَارَقَ الْمَاءَ ؟ »
+> TR: L'évocation d'Allah est pour le cœur ce qu'est l'eau pour le poisson. Quel serait l'état du poisson si on le sortait de l'eau ?
+> REF: Cité dans *Al-Wâbil As-Sayyib* d'Ibn al-Qayyim.
+
+Le cœur qui ne se rappelle plus d'Allah étouffe — exactement comme un poisson hors de l'eau. Les invocations du matin et du soir sont précisément ce qui maintient ce cœur en vie tout au long de la journée et de la nuit.
+
+## Pourquoi spécifiquement matin et soir ?
+
+Allah ﷻ ordonne dans le Coran :
+
+> AR: ﴿ يَا أَيُّهَا الَّذِينَ آمَنُوا اذْكُرُوا اللَّهَ ذِكْرًا كَثِيرًا * وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا ﴾
+> TR: Ô vous qui avez cru, évoquez Allah d'une évocation abondante, et glorifiez-Le matin et soir.
+> REF: Coran, sourate Al-Ahzâb (33), versets 41-42.
+
+Le matin et le soir sont des moments-charnières : ils encadrent la journée, ils marquent le passage de la lumière à l'obscurité (et inversement), ils correspondent au moment où les anges de la nuit et du jour se relaient. C'est pour cela que le Prophète ﷺ y a attaché des invocations spécifiques d'une grande puissance.
+
+## Quelques mérites prouvés des adhkâr du matin et du soir
+
+- **Protection contre tout mal** : « Quiconque dit chaque matin et chaque soir : *Au nom d'Allah, avec le nom duquel rien ne nuit ni sur terre ni dans le ciel, et Il est l'Audient, l'Omniscient* (3 fois), rien ne lui nuira. » (Abou Dâwûd, Tirmidhî — authentifié)
+- **Suffisance contre toute chose** : « Quiconque dit *Hasbiya Allâhu lâ ilâha illâ Huwa…* (7 fois) matin et soir, Allah lui suffira contre tout ce qui le préoccupe. » (Abou Dâwûd)
+- **Garantie d'entrer au Paradis** : « Quiconque récite le verset du Trône (Âyat al-Kursî) le matin sera protégé jusqu'au soir, et le soir jusqu'au matin. » (An-Nasâ'î — authentifié par Al-Albânî)
+- **Pardon des péchés** : Le Sayyid al-Istighfâr récité avec foi le matin garantit le Paradis à celui qui meurt dans la journée. (Boukhârî)
+
+## Comment intégrer les adhkâr dans une vie chargée en France ?
+
+Vous travaillez, vous avez des enfants, vous prenez les transports : **ce n'est pas une excuse, c'est une opportunité**.
+
+- **Matin** : récitez vos adhkâr juste après la prière du Fajr, avant le café, ou dans votre voiture/transport
+- **Soir** : récitez vos adhkâr après la prière de 'Asr (ou Maghrib selon l'avis suivi), pas juste avant de dormir
+- **Régularité avant quantité** : 5 minutes par jour, tous les jours, valent mieux que 30 minutes une fois par semaine
+- **Apprenez par cœur petit à petit** : commencez par 3 invocations, puis ajoutez-en une chaque semaine
+
+## Le livret complet à télécharger gratuitement
+
+Pour vous aider à mettre cette pratique en place dès aujourd'hui, nous mettons à votre disposition **gratuitement** un livret PDF complet contenant :
+
+- Les invocations authentiques du matin et du soir
+- Le **texte arabe**, la **phonétique** et la **traduction française**
+- Les **références** (Coran, Boukhârî, Mouslim, etc.) et les **mérites** de chaque invocation
+- Une mise en page claire pour l'imprimer ou le lire sur téléphone
+
+[[DOWNLOAD:/downloads/invocations-matin-soir.pdf|Livret des invocations du matin et du soir|Téléchargez gratuitement le PDF complet — texte arabe, phonétique, traduction et mérites]]
+
+## Et après ?
+
+Lire les adhkâr est un excellent début. Mais pour les **prononcer correctement** — chaque lettre, chaque attribut — rien ne remplace un enseignant qui vous corrige en direct. C'est précisément ce que nous proposons à Daaru Al'Qurane : apprendre à lire et réciter le Coran et la Sounnah avec le tajwîd authentique, en français, sur Zoom.
+
+${CTA}`,
+  },
+  {
+    slug: "regles-du-tajweed-guide-complet",
+    title: "Les règles du Tajweed : guide complet (PDF gratuit)",
+    description: "Guide complet des règles du Tajweed : Noun saakinah, Meem saakinah, Madd, Qalqalah, makhârij. Téléchargez gratuitement notre PDF de règles essentielles.",
+    keywords: ["règles du tajweed", "tajweed PDF gratuit", "apprendre tajweed", "tajwid en ligne", "règles du Coran"],
+    category: "Tajwid",
+    readingTime: 11,
+    publishedAt: "2026-05-04",
+    cover: heroBg,
+    excerpt: "Le Tajweed n'est pas un ornement : c'est la science qui préserve la Parole d'Allah de toute déformation. Voici les règles essentielles, et notre PDF complet à télécharger gratuitement.",
+    content: `## Qu'est-ce que le Tajweed ?
+
+Le mot **Tajweed** (التَّجْوِيد) vient de la racine *j-w-d* qui signifie « rendre meilleur, embellir, perfectionner ». Techniquement, c'est la science qui étudie les **règles de prononciation correcte du Coran**, telles qu'elles ont été transmises sans interruption depuis le Prophète ﷺ jusqu'à nos jours.
+
+Allah ﷻ ordonne :
+
+> AR: ﴿ وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا ﴾
+> TR: Et récite le Coran avec une récitation lente et soignée.
+> REF: Coran, sourate Al-Muzzammil (73), verset 4.
+
+L'imam 'Alî رضي الله عنه a expliqué ce verset en disant que le **tartîl**, c'est précisément l'application du tajweed et la connaissance des pauses (waqf).
+
+## Tajweed : obligation ou recommandation ?
+
+Les savants distinguent deux niveaux :
+
+- **Tajweed obligatoire (wâjib)** : éviter les fautes manifestes (lahn jalî) qui modifient le sens — par exemple confondre un *س* avec un *ص*, ou ouvrir une voyelle qui doit être fermée. Ces fautes sont **un péché** pour celui qui les commet en sachant qu'elles existent.
+- **Tajweed d'embellissement (mustahabb)** : appliquer toutes les règles fines (durée exacte des madd, ghounnah, etc.) — c'est cela qu'on cherche à atteindre.
+
+> AR: « مَنْ قَرَأَ الْقُرْآنَ وَهُوَ مَاهِرٌ بِهِ مَعَ السَّفَرَةِ الْكِرَامِ الْبَرَرَةِ، وَالَّذِي يَقْرَأُ الْقُرْآنَ وَيَتَتَعْتَعُ فِيهِ وَهُوَ عَلَيْهِ شَاقٌّ لَهُ أَجْرَانِ »
+> TR: Celui qui récite le Coran avec maîtrise sera avec les nobles et pieux ambassadeurs (les anges scribes), et celui qui récite le Coran en bégayant et avec difficulté aura **deux récompenses**.
+> REF: Rapporté par Al-Boukhârî (n°4937) et Mouslim (n°798), d'après 'Â'isha رضي الله عنها.
+
+Donc : même le débutant qui peine est récompensé doublement. Mais l'objectif reste la maîtrise.
+
+## Les makhârij (points d'articulation)
+
+L'arabe classique compte **17 points d'articulation** répartis en 5 zones principales :
+
+1. **Al-jawf** (la cavité buccale et thoracique) : pour les voyelles longues (ا، و، ي)
+2. **Al-halq** (la gorge) : ء، ه، ع، ح، غ، خ
+3. **Al-lisân** (la langue) — la zone la plus riche : 18 lettres
+4. **Ash-shafatân** (les lèvres) : ف، ب، م، و
+5. **Al-khayshûm** (la cavité nasale) : pour la ghounnah du *meem* et du *noun*
+
+**Sans maîtrise des makhârij, aucune lecture correcte n'est possible.**
+
+## Les règles du Noun sâkinah (نْ) et du Tanwîn
+
+Quatre règles s'appliquent selon la lettre qui suit :
+
+1. **Idh-hâr (إظهار) — Manifestation claire** : devant les 6 lettres gutturales (ء، ه، ع، ح، غ، خ), le *noun* est prononcé clairement, sans ghounnah marquée.
+2. **Idghâm (إدغام) — Assimilation** : devant les 6 lettres ي، ر، م، ل، و، ن, le *noun* fusionne avec la lettre suivante (avec ou sans ghounnah selon les cas).
+3. **Iqlâb (إقلاب) — Transformation** : devant la lettre ب, le *noun* devient un *meem* caché avec ghounnah.
+4. **Ikhfâ' (إخفاء) — Dissimulation** : devant les 15 lettres restantes, le *noun* est dissimulé avec une ghounnah de 2 mouvements.
+
+## Les règles du Meem sâkinah (مْ)
+
+Trois règles :
+
+- **Idghâm shafawî** : devant un autre meem (مّ)
+- **Ikhfâ' shafawî** : devant un *bâ* (ب)
+- **Idh-hâr shafawî** : devant toutes les autres lettres
+
+## Les règles du Madd (allongement)
+
+- **Madd Tabî'î (naturel)** : 2 mouvements (harakât) — c'est le madd de base sur ا، و، ي de prolongation
+- **Madd Far'î (dérivé)** :
+  - **Madd Wâjib Muttasil** : 4 ou 5 mouvements (madd suivi d'une hamza dans le même mot)
+  - **Madd Jâ'iz Munfasil** : 2, 4 ou 5 mouvements (madd suivi d'une hamza dans le mot suivant)
+  - **Madd Lâzim** : 6 mouvements obligatoires (madd suivi d'un soukoun ferme)
+  - **Madd 'Âridh li-s-Soukoun** : 2, 4 ou 6 mouvements (madd suivi d'un soukoun de pause)
+
+## La Qalqalah (vibration)
+
+Cinq lettres : ق، ط، ب، ج، د (mémorisées par l'expression *« قُطْبُ جَدٍّ »*).
+
+Quand l'une de ces lettres porte un soukoun, on lui ajoute une **vibration** brève qui rend le son rebondissant. Deux niveaux :
+
+- **Qalqalah sughrâ (mineure)** : au milieu du mot
+- **Qalqalah kubrâ (majeure)** : à la fin du mot, surtout en pause
+
+## Tafkhîm (emphase) et Tarqîq (finesse)
+
+- **Lettres toujours fortes (mufakhama)** : خ، ص، ض، غ، ط، ق، ظ
+- **Lettres toujours fines (muraqqaqa)** : toutes les autres
+- **Lettres variables** : ا، ل (de Allah), ر — selon les voyelles environnantes
+
+## Les pauses (Awqâf)
+
+Savoir s'arrêter est aussi important que savoir lire. Une mauvaise pause peut **changer le sens** du verset. Le mushaf de Médine indique les types de pause par des lettres au-dessus du texte (مـ، لا، ج، ط، قف…).
+
+## Le PDF complet à télécharger
+
+Nous avons préparé pour vous un **document PDF gratuit** qui regroupe toutes les règles essentielles du Tajweed avec :
+
+- Le **texte arabe** des règles
+- Les **explications en français**
+- Les **lettres concernées** pour chaque règle
+- Des **exemples pratiques** tirés du Coran
+
+C'est l'outil idéal pour étudier, réviser, et accompagner vos cours.
+
+[[DOWNLOAD:/downloads/regles-du-tajweed.pdf|Guide complet des règles du Tajweed|Téléchargez gratuitement le PDF — règles essentielles, exemples coraniques et explications en français]]
+
+## Pourquoi le PDF ne suffit pas (et ce qu'il faut en plus)
+
+Le tajweed est une **science orale** (نَقْلِيَّة) : on l'apprend de la bouche d'un enseignant qui corrige votre prononciation en direct. Aucun PDF, aucune vidéo, aucune application ne remplacera jamais cette correction immédiate.
+
+C'est précisément ce que propose Daaru Al'Qurane : des cours de tajweed **en direct sur Zoom**, en français, avec des enseignants compétents qui suivent la voie des pieux prédécesseurs. Que vous soyez en France, en Belgique, en Suisse ou au Canada, vous pouvez démarrer dès cette semaine.
+
+## Conclusion
+
+Le Tajweed est l'**honneur dû à la Parole d'Allah**. Le négliger, c'est la déformer. L'apprendre, c'est s'inscrire dans la chaîne ininterrompue qui remonte jusqu'au Prophète ﷺ.
+
+Téléchargez le PDF, étudiez-le, mais surtout : **inscrivez-vous à un vrai cours**. Votre récitation en sera transformée en quelques semaines.
+
+${CTA}`,
+  },
 ].map((p) => ({ ...p, content: AUTH_INTRO + p.content }));
 
 export const blogCategories = Array.from(new Set(blogPosts.map((p) => p.category)));
