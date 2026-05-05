@@ -524,7 +524,7 @@ Non. Les cours sont planifiés selon votre disponibilité. Que vous soyez à Bru
 Daaru Al Qurane organise les sections séparément :
 
 - Section frères : enseignants hommes, contact dédié
-- Section sœurs : enseignantes, mail dédié (daaralquranesoeurs@gmail.com)
+- Section sœurs : enseignantes, mail dédié (contact-soeurs@daarualqurane.com)
 - Section enfants : pédagogie adaptée
 
 ${CTA}`,

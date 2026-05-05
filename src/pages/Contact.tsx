@@ -13,13 +13,13 @@ import teacherImg from "@/assets/teacher-portrait.jpg";
 const maleContacts = [
   { icon: Phone, label: "Téléphone principal / Frères", value: "+229 01 95 11 99 20", href: "tel:+2290195119920" },
   { icon: MessageCircle, label: "WhatsApp (Frères)", value: "Discutez avec nous", href: "https://wa.me/2290195119920" },
-  { icon: Mail, label: "Email principal / Frères", value: "daaralqurane@gmail.com", href: "mailto:daaralqurane@gmail.com" },
+  { icon: Mail, label: "Email principal / Frères", value: "contact@daarualqurane.com", href: "mailto:contact@daarualqurane.com" },
 ];
 
 const femaleContacts = [
   { icon: Phone, label: "Téléphone (Sœurs)", value: "01 47 98 47 61", href: "tel:+2290147984761" },
   { icon: MessageCircle, label: "WhatsApp (Sœurs)", value: "Discutez avec nous", href: "https://wa.me/2290147984761" },
-  { icon: Mail, label: "Email (Sœurs)", value: "daaralquranesoeurs@gmail.com", href: "mailto:daaralquranesoeurs@gmail.com" },
+  { icon: Mail, label: "Email (Sœurs)", value: "contact-soeurs@daarualqurane.com", href: "mailto:contact-soeurs@daarualqurane.com" },
 ];
 
 const ContactCard = ({ item }: { item: typeof maleContacts[0] }) => (
