@@ -15,18 +15,26 @@ export type BlogPost = {
   content: string; // markdown-lite (titres ##, paragraphes, listes -)
 };
 
-import quranDesk from "@/assets/quran-desk.jpg";
-import zoomClass from "@/assets/zoom-class.jpg";
-import mixedZoom from "@/assets/mixed-zoom-class.jpg";
-import teacherPortrait from "@/assets/teacher-portrait.jpg";
-import maleTeacher from "@/assets/male-teacher.jpg";
-import studentReading from "@/assets/student-reading.jpg";
-import maleStudent from "@/assets/male-student-reading.jpg";
 import childWriting from "@/assets/child-writing.jpg";
-import maleChild from "@/assets/male-child-writing.jpg";
-import mosqueParakou from "@/assets/mosque-parakou.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
-import heroMixed from "@/assets/hero-mixed.png";
+// Unique blog covers — chaque article a sa propre image qui illustre son sujet
+import coverCoranFrance from "@/assets/blog/coran-france-guide.jpg";
+import coverArabeCoranique from "@/assets/blog/arabe-coranique.jpg";
+import coverSouratesCourtes from "@/assets/blog/sourates-courtes.jpg";
+import coverMeilleurApprend from "@/assets/blog/meilleur-apprend-enseigne.jpg";
+import coverTalabAlIlm from "@/assets/blog/talab-al-ilm.jpg";
+import coverFiqhPriere from "@/assets/blog/fiqh-priere.jpg";
+import coverInvocations from "@/assets/blog/invocations-matin-soir.jpg";
+import coverTajwidRegles from "@/assets/blog/tajwid-regles.jpg";
+import coverHifz from "@/assets/blog/hifz-memorisation.jpg";
+import coverCoranBelgique from "@/assets/blog/coran-belgique.jpg";
+import coverCoranSuisse from "@/assets/blog/coran-suisse.jpg";
+import coverPrononciation from "@/assets/blog/prononciation-arabe.jpg";
+import coverEtudierTravaillant from "@/assets/blog/etudier-en-travaillant.jpg";
+import coverAqida from "@/assets/blog/aqida-introduction.jpg";
+import coverArabeDebutant from "@/assets/sister-quran.png";
+import coverTajwidDebutant from "@/assets/brother-quran.png";
+import coverCoranEnfants from "@/assets/child-boy-quran.png";
+import coverTajweedPdf from "@/assets/blog/tajwid-regles.jpg";
 
 const CTA = `
 
