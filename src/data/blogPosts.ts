@@ -63,7 +63,7 @@ export const blogPosts: BlogPost[] = [
     category: "Apprentissage du Coran",
     readingTime: 9,
     publishedAt: "2026-01-12",
-    cover: quranDesk,
+    cover: coverCoranFrance,
     excerpt: "Vous vivez en France et souhaitez apprendre le Coran sérieusement, sans vous déplacer ? Ce guide vous explique tout : méthode, étapes, pièges à éviter et meilleurs outils.",
     content: `## Pourquoi apprendre le Coran en ligne quand on vit en France ?
 
@@ -115,7 +115,7 @@ ${CTA}`,
     category: "Langue arabe",
     readingTime: 8,
     publishedAt: "2026-01-15",
-    cover: maleStudent,
+    cover: coverArabeDebutant,
     excerpt: "Débuter l'arabe peut sembler intimidant. Voici un parcours clair, étape par étape, pour passer de zéro à la lecture fluide en quelques mois.",
     content: `## Pourquoi apprendre l'arabe en ligne ?
 
@@ -169,7 +169,7 @@ ${CTA}`,
     category: "Tajwid",
     readingTime: 10,
     publishedAt: "2026-01-18",
-    cover: zoomClass,
+    cover: coverTajwidRegles,
     excerpt: "Le tajwid n'est pas un luxe : c'est une obligation pour préserver la parole d'Allah. Voici les règles fondamentales expliquées clairement.",
     content: `## Qu'est-ce que le tajwid ?
 
@@ -231,7 +231,7 @@ ${CTA}`,
     category: "Mémorisation",
     readingTime: 11,
     publishedAt: "2026-01-22",
-    cover: maleStudent,
+    cover: coverHifz,
     excerpt: "Mémoriser le Coran est l'une des œuvres les plus nobles. Voici la méthode complète pour y parvenir, même en travaillant ou en étudiant.",
     content: `## Le mérite de la mémorisation du Coran
 
@@ -292,7 +292,7 @@ ${CTA}`,
     category: "Enfants",
     readingTime: 8,
     publishedAt: "2026-01-25",
-    cover: childWriting,
+    cover: coverCoranEnfants,
     excerpt: "Donner à votre enfant un lien fort avec le Coran dès le plus jeune âge est l'un des plus beaux héritages que vous puissiez lui offrir.",
     content: `## À quel âge commencer ?
 
@@ -349,7 +349,7 @@ ${CTA}`,
     category: "Sciences religieuses",
     readingTime: 9,
     publishedAt: "2026-01-28",
-    cover: maleTeacher,
+    cover: coverTalabAlIlm,
     excerpt: "Chercher la science religieuse n'est pas réservé aux savants. C'est une obligation pour tout musulman. Découvrez comment commencer correctement.",
     content: `## Qu'est-ce que talab al-'ilm ?
 
@@ -401,7 +401,7 @@ ${CTA}`,
     category: "Langue arabe",
     readingTime: 9,
     publishedAt: "2026-02-01",
-    cover: quranDesk,
+    cover: coverArabeCoranique,
     excerpt: "Lire le Coran sans le comprendre est une grande perte. Voici comment combler ce fossé en quelques mois d'efforts ciblés.",
     content: `## Pourquoi l'arabe coranique mérite une approche spécifique
 
@@ -447,7 +447,7 @@ ${CTA}`,
     category: "Tajwid",
     readingTime: 7,
     publishedAt: "2026-02-04",
-    cover: heroBg,
+    cover: coverTajwidDebutant,
     excerpt: "Vous savez à peine lire l'arabe et vous voulez bien prononcer le Coran ? Voici la feuille de route claire pour le tajwid débutant.",
     content: `## Étape 1 : maîtriser parfaitement la lecture
 
@@ -497,7 +497,7 @@ ${CTA}`,
     category: "Apprentissage du Coran",
     readingTime: 7,
     publishedAt: "2026-02-08",
-    cover: zoomClass,
+    cover: coverCoranBelgique,
     excerpt: "Vous vivez à Bruxelles, Anvers, Liège ou ailleurs en Belgique et cherchez un enseignement sérieux du Coran ? Voici votre solution.",
     content: `## Le défi de l'apprentissage du Coran en Belgique
 
@@ -545,7 +545,7 @@ ${CTA}`,
     category: "Apprentissage du Coran",
     readingTime: 7,
     publishedAt: "2026-02-11",
-    cover: mosqueParakou,
+    cover: coverCoranSuisse,
     excerpt: "Que vous viviez à Genève, Lausanne, Zurich, Bâle ou Fribourg, accédez à un enseignement coranique francophone de qualité, sans déplacement.",
     content: `## La Suisse francophone et l'apprentissage religieux
 
@@ -583,7 +583,7 @@ ${CTA}`,
     category: "Tajwid",
     readingTime: 8,
     publishedAt: "2026-02-14",
-    cover: teacherPortrait,
+    cover: coverPrononciation,
     excerpt: "Les francophones rencontrent des difficultés spécifiques avec certaines lettres arabes. Voici comment les surmonter méthodiquement.",
     content: `## Les lettres les plus difficiles pour un francophone
 
@@ -626,7 +626,7 @@ ${CTA}`,
     category: "Apprentissage du Coran",
     readingTime: 8,
     publishedAt: "2026-02-17",
-    cover: maleStudent,
+    cover: coverEtudierTravaillant,
     excerpt: "Vous travaillez 40 heures par semaine et pensez que c'est impossible d'étudier sérieusement la religion ? Voici la méthode des adultes qui réussissent.",
     content: `## Le mythe du "je n'ai pas le temps"
 
@@ -670,7 +670,7 @@ ${CTA}`,
     category: "Sciences religieuses",
     readingTime: 9,
     publishedAt: "2026-02-20",
-    cover: maleTeacher,
+    cover: coverFiqhPriere,
     excerpt: "La prière est le pilier de la religion. Connaître ses règles est une obligation pour chaque musulman. Voici les bases incontournables.",
     content: `## L'importance du fiqh de la prière
 
@@ -732,7 +732,7 @@ ${CTA}`,
     category: "Sciences religieuses",
     readingTime: 9,
     publishedAt: "2026-02-23",
-    cover: heroMixed,
+    cover: coverAqida,
     excerpt: "L'aqida (croyance) est la fondation de toute la religion. Découvrez la voie claire des pieux prédécesseurs, sans détours et sans innovations.",
     content: `## Qu'est-ce que l'aqida ?
 
@@ -780,7 +780,7 @@ ${CTA}`,
     category: "Mémorisation",
     readingTime: 7,
     publishedAt: "2026-02-26",
-    cover: quranDesk,
+    cover: coverSouratesCourtes,
     excerpt: "Pour prier en variant ses récitations, mémoriser le juz 'amma est la priorité absolue. Voici l'ordre conseillé et les mérites de chaque sourate.",
     content: `## Pourquoi commencer par le juz 'amma ?
 
@@ -824,7 +824,7 @@ ${CTA}`,
     category: "Apprentissage du Coran",
     readingTime: 9,
     publishedAt: "2026-03-02",
-    cover: quranDesk,
+    cover: coverMeilleurApprend,
     excerpt: "Le Prophète ﷺ a placé l'apprentissage du Coran au sommet des actes. Pourquoi cette priorité ? Et que dit-elle de notre époque où chacun parle sans avoir appris ?",
     content: `## Le hadith fondateur
 
@@ -923,7 +923,7 @@ ${CTA}`,
     category: "Sciences religieuses",
     readingTime: 8,
     publishedAt: "2026-05-04",
-    cover: maleTeacher,
+    cover: coverInvocations,
     excerpt: "Le musulman a besoin de l'invocation à chaque instant. Découvrez pourquoi les adhkâr du matin et du soir sont une porte ouverte vers le Paradis — et téléchargez gratuitement notre livret PDF complet.",
     content: `## Le besoin permanent du musulman pour l'invocation
 
@@ -1006,7 +1006,7 @@ ${CTA}`,
     category: "Tajwid",
     readingTime: 11,
     publishedAt: "2026-05-04",
-    cover: heroBg,
+    cover: coverTajweedPdf,
     excerpt: "Le Tajweed n'est pas un ornement : c'est la science qui préserve la Parole d'Allah de toute déformation. Voici les règles essentielles, et notre PDF complet à télécharger gratuitement.",
     content: `## Qu'est-ce que le Tajweed ?
 
