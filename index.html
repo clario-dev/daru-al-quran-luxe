@@ -85,6 +85,17 @@
 
   <body>
     <div id="root"></div>
+    <script>
+      // Restore deep-link path when arriving via static-host SPA fallback (404.html → /?spa-redirect=...)
+      (function () {
+        try {
+          var p = new URLSearchParams(window.location.search).get("spa-redirect");
+          if (p) {
+            window.history.replaceState(null, "", p);
+          }
+        } catch (e) {}
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

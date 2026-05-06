@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daaru Al'Qurane</title>
+    <script>
+      // SPA fallback for static hosts that serve 404.html on unknown routes
+      // (GitHub Pages, certain Apache/Nginx setups). We replace the URL with the
+      // requested path encoded into the query string and bounce to index.html,
+      // where a small redirect script restores the original path.
+      (function () {
+        var l = window.location;
+        var redirect = l.pathname + l.search + l.hash;
+        l.replace(
+          l.protocol + "//" + l.host + "/?spa-redirect=" + encodeURIComponent(redirect)
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

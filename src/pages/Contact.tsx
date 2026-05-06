@@ -138,34 +138,88 @@ const Contact = () => {
             <h2 className="font-display text-2xl font-bold text-center mb-8">
               Envoyez-nous un <span className="text-gradient-gold">message</span>
             </h2>
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-1.5 block">Nom</label>
-                  <Input placeholder="Votre nom" className="bg-secondary/50 border-border focus:border-primary" />
-                </div>
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
-                  <Input type="email" placeholder="vous@email.com" className="bg-secondary/50 border-border focus:border-primary" />
-                </div>
-              </div>
-              <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Sujet</label>
-                <Input placeholder="Comment pouvons-nous vous aider ?" className="bg-secondary/50 border-border focus:border-primary" />
-              </div>
-              <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
-                <Textarea rows={5} placeholder="Votre message..." className="bg-secondary/50 border-border focus:border-primary resize-none" />
-              </div>
-              <Button type="submit" size="lg" className="w-full bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
-                Envoyer le message
-              </Button>
-            </form>
+            <ContactForm />
           </AnimatedSection>
         </div>
       </section>
       <Footer />
     </div>
+  );
+};
+
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  name: z.string().trim().min(2, "Nom trop court").max(100),
+  email: z.string().trim().email("Email invalide").max(255),
+  subject: z.string().trim().min(2, "Sujet requis").max(150),
+  message: z.string().trim().min(10, "Message trop court (10 caractères min)").max(2000),
+});
+
+const ContactForm = () => {
+  const { toast } = useToast();
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
+
+  const onChange = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    setForm((p) => ({ ...p, [k]: e.target.value }));
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const parsed = contactSchema.safeParse(form);
+    if (!parsed.success) {
+      toast({
+        title: "Formulaire invalide",
+        description: parsed.error.issues[0]?.message ?? "Vérifiez les champs.",
+        variant: "destructive",
+      });
+      return;
+    }
+    setSubmitting(true);
+    const { name, email, subject, message } = parsed.data;
+    const body = `Nom : ${name}%0AEmail : ${email}%0A%0A${encodeURIComponent(message)}`;
+    const subj = encodeURIComponent(`[Site] ${subject}`);
+    // Open user's email client pre-filled
+    window.location.href = `mailto:contact@daarualqurane.com?subject=${subj}&body=${body}`;
+    toast({
+      title: "Votre message est prêt",
+      description: "Votre messagerie s'est ouverte. Cliquez sur Envoyer pour finaliser.",
+    });
+    setTimeout(() => setSubmitting(false), 800);
+  };
+
+  return (
+    <form className="space-y-5" onSubmit={handleSubmit}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="cf-name" className="text-sm font-medium text-foreground mb-1.5 block">Nom</label>
+          <Input id="cf-name" value={form.name} onChange={onChange("name")} placeholder="Votre nom" className="bg-secondary/50 border-border focus:border-primary" required />
+        </div>
+        <div>
+          <label htmlFor="cf-email" className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
+          <Input id="cf-email" type="email" value={form.email} onChange={onChange("email")} placeholder="vous@email.com" className="bg-secondary/50 border-border focus:border-primary" required />
+        </div>
+      </div>
+      <div>
+        <label htmlFor="cf-subject" className="text-sm font-medium text-foreground mb-1.5 block">Sujet</label>
+        <Input id="cf-subject" value={form.subject} onChange={onChange("subject")} placeholder="Comment pouvons-nous vous aider ?" className="bg-secondary/50 border-border focus:border-primary" required />
+      </div>
+      <div>
+        <label htmlFor="cf-message" className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
+        <Textarea id="cf-message" rows={5} value={form.message} onChange={onChange("message")} placeholder="Votre message..." className="bg-secondary/50 border-border focus:border-primary resize-none" required />
+      </div>
+      <Button type="submit" size="lg" disabled={submitting} className="w-full bg-gradient-gold text-primary-foreground font-semibold hover:opacity-90">
+        {submitting ? "Ouverture..." : "Envoyer le message"}
+      </Button>
+      <p className="text-xs text-muted-foreground text-center">
+        Préférez-vous WhatsApp ?{" "}
+        <a href="https://wa.me/2290195119920" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+          Discutez avec nous
+        </a>
+      </p>
+    </form>
   );
 };
 
