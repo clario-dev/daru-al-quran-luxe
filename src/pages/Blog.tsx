@@ -12,8 +12,8 @@ const Blog = () => {
 
   useEffect(() => {
     document.title = "Blog Coran & Arabe — Conseils, méthodes & guides | Daaru Al Qurane";
-    const meta = document.querySelector('meta[name="description"]');
     const desc = "Articles SEO sur l'apprentissage du Coran, du tajwid et de la langue arabe en ligne. Conseils pratiques pour francophones de France, Belgique et Suisse.";
+    const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", desc);
     else {
       const m = document.createElement("meta");
@@ -21,6 +21,40 @@ const Blog = () => {
       m.content = desc;
       document.head.appendChild(m);
     }
+
+    // JSON-LD: Blog + ItemList des articles
+    const origin = "https://daarualqurane.com";
+    document.getElementById("ld-blog-list")?.remove();
+    const script = document.createElement("script");
+    script.id = "ld-blog-list";
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      name: "Blog Daaru Al Qurane",
+      description: desc,
+      url: `${origin}/blog`,
+      inLanguage: "fr-FR",
+      publisher: {
+        "@type": "Organization",
+        name: "Daaru Al Qurane",
+        logo: { "@type": "ImageObject", url: `${origin}/favicon.png` },
+      },
+      blogPost: blogPosts.map((p) => ({
+        "@type": "BlogPosting",
+        headline: p.title,
+        description: p.description,
+        datePublished: p.publishedAt,
+        url: `${origin}/blog/${p.slug}`,
+        image: `${origin}${p.cover}`,
+        author: { "@type": "Organization", name: "Daaru Al Qurane" },
+      })),
+    });
+    document.head.appendChild(script);
+
+    return () => {
+      document.getElementById("ld-blog-list")?.remove();
+    };
   }, []);
 
   const filtered =
