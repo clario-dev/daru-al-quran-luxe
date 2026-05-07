@@ -45,30 +45,64 @@ const BlogPost = () => {
     // JSON-LD BlogPosting
     const existing = document.getElementById("ld-blogpost");
     if (existing) existing.remove();
+    const existingBc = document.getElementById("ld-blogpost-breadcrumb");
+    if (existingBc) existingBc.remove();
+
+    const origin = "https://daarualqurane.com";
+    const imageUrl = `${origin}${post.cover}`;
+    const url = `${origin}/blog/${post.slug}`;
+    const wordCount = post.content.split(/\s+/).filter(Boolean).length;
+
     const script = document.createElement("script");
     script.id = "ld-blogpost";
     script.type = "application/ld+json";
     script.text = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "BlogPosting",
+      "@id": url,
       headline: post.title,
+      name: post.title,
       description: post.description,
       keywords: post.keywords.join(", "),
+      articleSection: post.category,
       datePublished: post.publishedAt,
-      inLanguage: "fr",
-      author: { "@type": "Organization", name: "Daaru Al Qurane" },
+      dateModified: post.publishedAt,
+      inLanguage: "fr-FR",
+      wordCount,
+      image: [imageUrl],
+      url,
+      author: {
+        "@type": "Organization",
+        name: "Daaru Al Qurane",
+        url: origin,
+      },
       publisher: {
         "@type": "Organization",
         name: "Daaru Al Qurane",
-        logo: { "@type": "ImageObject", url: "https://daarualqurane.com/favicon.png" },
+        url: origin,
+        logo: { "@type": "ImageObject", url: `${origin}/favicon.png` },
       },
-      mainEntityOfPage: `https://daarualqurane.com/blog/${post.slug}`,
+      mainEntityOfPage: { "@type": "WebPage", "@id": url },
     });
     document.head.appendChild(script);
 
+    const bc = document.createElement("script");
+    bc.id = "ld-blogpost-breadcrumb";
+    bc.type = "application/ld+json";
+    bc.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Accueil", item: origin },
+        { "@type": "ListItem", position: 2, name: "Blog", item: `${origin}/blog` },
+        { "@type": "ListItem", position: 3, name: post.title, item: url },
+      ],
+    });
+    document.head.appendChild(bc);
+
     return () => {
-      const s = document.getElementById("ld-blogpost");
-      if (s) s.remove();
+      document.getElementById("ld-blogpost")?.remove();
+      document.getElementById("ld-blogpost-breadcrumb")?.remove();
     };
   }, [post]);
 
