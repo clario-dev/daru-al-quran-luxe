@@ -84,7 +84,17 @@ const BlogPost = () => {
         {/* Hero */}
         <div className="relative">
           <div className="absolute inset-0 h-[60vh]">
-            <img src={post.cover} alt={post.coverAlt || post.title} className="w-full h-full object-cover opacity-30" />
+            <img
+              src={post.cover}
+              srcSet={post.coverSrcSet}
+              sizes="100vw"
+              alt={post.coverAlt || post.title}
+              fetchPriority="high"
+              decoding="async"
+              width={1600}
+              height={900}
+              className="w-full h-full object-cover opacity-30"
+            />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/80 to-background" />
           </div>
 
@@ -190,8 +200,13 @@ const BlogPost = () => {
                   <div className="aspect-[16/10] overflow-hidden">
                     <img
                       src={r.cover}
+                      srcSet={r.coverSrcSet}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       alt={r.coverAlt || r.title}
                       loading="lazy"
+                      decoding="async"
+                      width={1200}
+                      height={750}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
