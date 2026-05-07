@@ -11,6 +11,7 @@ export type BlogPost = {
   readingTime: number; // minutes
   publishedAt: string; // ISO date
   cover: string; // image import
+  coverAlt: string; // texte alternatif descriptif (SEO + accessibilité)
   excerpt: string;
   content: string; // markdown-lite (titres ##, paragraphes, listes -)
 };
