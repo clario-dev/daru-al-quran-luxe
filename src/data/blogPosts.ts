@@ -31,7 +31,7 @@ import coverCoranSuisse from "@/assets/blog/coran-suisse.jpg";
 import coverPrononciation from "@/assets/blog/prononciation-arabe.jpg";
 import coverEtudierTravaillant from "@/assets/blog/etudier-en-travaillant.jpg";
 import coverAqida from "@/assets/blog/aqida-introduction.jpg";
-import coverArabeDebutant from "@/assets/sister-quran.png";
+import coverArabeDebutant from "@/assets/blog/arabe-debutant.jpg";
 import coverTajwidDebutant from "@/assets/brother-quran.png";
 import coverCoranEnfants from "@/assets/child-boy-quran.png";
 import coverTajweedPdf from "@/assets/blog/tajwid-regles.jpg";
