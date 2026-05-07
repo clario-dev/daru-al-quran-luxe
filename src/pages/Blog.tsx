@@ -88,7 +88,7 @@ const Blog = () => {
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <img
                       src={post.cover}
-                      alt={post.title}
+                      alt={post.coverAlt || post.title}
                       loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
