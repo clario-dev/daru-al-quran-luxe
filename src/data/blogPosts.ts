@@ -10,7 +10,8 @@ export type BlogPost = {
   category: string;
   readingTime: number; // minutes
   publishedAt: string; // ISO date
-  cover: string; // image import
+  cover: string; // image import (fallback src)
+  coverSrcSet?: string; // srcset webp multi-tailles (responsive)
   coverAlt: string; // texte alternatif descriptif (SEO + accessibilité)
   excerpt: string;
   content: string; // markdown-lite (titres ##, paragraphes, listes -)
@@ -19,23 +20,41 @@ export type BlogPost = {
 import childWriting from "@/assets/child-writing.jpg";
 // Unique blog covers — chaque article a sa propre image qui illustre son sujet
 import coverCoranFrance from "@/assets/blog/coran-france-guide.jpg";
+import coverCoranFranceSet from "@/assets/blog/coran-france-guide.jpg?responsive";
 import coverArabeCoranique from "@/assets/blog/arabe-coranique.jpg";
+import coverArabeCoraniqueSet from "@/assets/blog/arabe-coranique.jpg?responsive";
 import coverSouratesCourtes from "@/assets/blog/sourates-courtes.jpg";
+import coverSouratesCourtesSet from "@/assets/blog/sourates-courtes.jpg?responsive";
 import coverMeilleurApprend from "@/assets/blog/meilleur-apprend-enseigne.jpg";
+import coverMeilleurApprendSet from "@/assets/blog/meilleur-apprend-enseigne.jpg?responsive";
 import coverTalabAlIlm from "@/assets/blog/talab-al-ilm.jpg";
+import coverTalabAlIlmSet from "@/assets/blog/talab-al-ilm.jpg?responsive";
 import coverFiqhPriere from "@/assets/blog/fiqh-priere.jpg";
+import coverFiqhPriereSet from "@/assets/blog/fiqh-priere.jpg?responsive";
 import coverInvocations from "@/assets/blog/invocations-matin-soir.jpg";
+import coverInvocationsSet from "@/assets/blog/invocations-matin-soir.jpg?responsive";
 import coverTajwidRegles from "@/assets/blog/tajwid-regles.jpg";
+import coverTajwidReglesSet from "@/assets/blog/tajwid-regles.jpg?responsive";
 import coverHifz from "@/assets/blog/hifz-memorisation.jpg";
+import coverHifzSet from "@/assets/blog/hifz-memorisation.jpg?responsive";
 import coverCoranBelgique from "@/assets/blog/coran-belgique.jpg";
+import coverCoranBelgiqueSet from "@/assets/blog/coran-belgique.jpg?responsive";
 import coverCoranSuisse from "@/assets/blog/coran-suisse.jpg";
+import coverCoranSuisseSet from "@/assets/blog/coran-suisse.jpg?responsive";
 import coverPrononciation from "@/assets/blog/prononciation-arabe.jpg";
+import coverPrononciationSet from "@/assets/blog/prononciation-arabe.jpg?responsive";
 import coverEtudierTravaillant from "@/assets/blog/etudier-en-travaillant.jpg";
+import coverEtudierTravaillantSet from "@/assets/blog/etudier-en-travaillant.jpg?responsive";
 import coverAqida from "@/assets/blog/aqida-introduction.jpg";
+import coverAqidaSet from "@/assets/blog/aqida-introduction.jpg?responsive";
 import coverArabeDebutant from "@/assets/blog/arabe-debutant.jpg";
+import coverArabeDebutantSet from "@/assets/blog/arabe-debutant.jpg?responsive";
 import coverTajwidDebutant from "@/assets/brother-quran.png";
+import coverTajwidDebutantSet from "@/assets/brother-quran.png?responsive";
 import coverCoranEnfants from "@/assets/child-boy-quran.png";
-import coverTajweedPdf from "@/assets/blog/tajwid-regles.jpg";
+import coverCoranEnfantsSet from "@/assets/child-boy-quran.png?responsive";
+const coverTajweedPdf = coverTajwidRegles;
+const coverTajweedPdfSet = coverTajwidReglesSet;
 
 const CTA = `
 
