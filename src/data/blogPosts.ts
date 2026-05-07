@@ -10,7 +10,8 @@ export type BlogPost = {
   category: string;
   readingTime: number; // minutes
   publishedAt: string; // ISO date
-  cover: string; // image import
+  cover: string; // image import (fallback src)
+  coverSrcSet?: string; // srcset webp multi-tailles (responsive)
   coverAlt: string; // texte alternatif descriptif (SEO + accessibilité)
   excerpt: string;
   content: string; // markdown-lite (titres ##, paragraphes, listes -)
@@ -19,23 +20,41 @@ export type BlogPost = {
 import childWriting from "@/assets/child-writing.jpg";
 // Unique blog covers — chaque article a sa propre image qui illustre son sujet
 import coverCoranFrance from "@/assets/blog/coran-france-guide.jpg";
+import coverCoranFranceSet from "@/assets/blog/coran-france-guide.jpg?responsive";
 import coverArabeCoranique from "@/assets/blog/arabe-coranique.jpg";
+import coverArabeCoraniqueSet from "@/assets/blog/arabe-coranique.jpg?responsive";
 import coverSouratesCourtes from "@/assets/blog/sourates-courtes.jpg";
+import coverSouratesCourtesSet from "@/assets/blog/sourates-courtes.jpg?responsive";
 import coverMeilleurApprend from "@/assets/blog/meilleur-apprend-enseigne.jpg";
+import coverMeilleurApprendSet from "@/assets/blog/meilleur-apprend-enseigne.jpg?responsive";
 import coverTalabAlIlm from "@/assets/blog/talab-al-ilm.jpg";
+import coverTalabAlIlmSet from "@/assets/blog/talab-al-ilm.jpg?responsive";
 import coverFiqhPriere from "@/assets/blog/fiqh-priere.jpg";
+import coverFiqhPriereSet from "@/assets/blog/fiqh-priere.jpg?responsive";
 import coverInvocations from "@/assets/blog/invocations-matin-soir.jpg";
+import coverInvocationsSet from "@/assets/blog/invocations-matin-soir.jpg?responsive";
 import coverTajwidRegles from "@/assets/blog/tajwid-regles.jpg";
+import coverTajwidReglesSet from "@/assets/blog/tajwid-regles.jpg?responsive";
 import coverHifz from "@/assets/blog/hifz-memorisation.jpg";
+import coverHifzSet from "@/assets/blog/hifz-memorisation.jpg?responsive";
 import coverCoranBelgique from "@/assets/blog/coran-belgique.jpg";
+import coverCoranBelgiqueSet from "@/assets/blog/coran-belgique.jpg?responsive";
 import coverCoranSuisse from "@/assets/blog/coran-suisse.jpg";
+import coverCoranSuisseSet from "@/assets/blog/coran-suisse.jpg?responsive";
 import coverPrononciation from "@/assets/blog/prononciation-arabe.jpg";
+import coverPrononciationSet from "@/assets/blog/prononciation-arabe.jpg?responsive";
 import coverEtudierTravaillant from "@/assets/blog/etudier-en-travaillant.jpg";
+import coverEtudierTravaillantSet from "@/assets/blog/etudier-en-travaillant.jpg?responsive";
 import coverAqida from "@/assets/blog/aqida-introduction.jpg";
+import coverAqidaSet from "@/assets/blog/aqida-introduction.jpg?responsive";
 import coverArabeDebutant from "@/assets/blog/arabe-debutant.jpg";
+import coverArabeDebutantSet from "@/assets/blog/arabe-debutant.jpg?responsive";
 import coverTajwidDebutant from "@/assets/brother-quran.png";
+import coverTajwidDebutantSet from "@/assets/brother-quran.png?responsive";
 import coverCoranEnfants from "@/assets/child-boy-quran.png";
-import coverTajweedPdf from "@/assets/blog/tajwid-regles.jpg";
+import coverCoranEnfantsSet from "@/assets/child-boy-quran.png?responsive";
+const coverTajweedPdf = coverTajwidRegles;
+const coverTajweedPdfSet = coverTajwidReglesSet;
 
 const CTA = `
 
@@ -65,6 +84,7 @@ export const blogPosts: BlogPost[] = [
     readingTime: 9,
     publishedAt: "2026-01-12",
     cover: coverCoranFrance,
+    coverSrcSet: coverCoranFranceSet,
     coverAlt: "Coran ouvert posé sur un porte-Coran en bois, illustration d'un cours de Coran en ligne en France",
     excerpt: "Vous vivez en France et souhaitez apprendre le Coran sérieusement, sans vous déplacer ? Ce guide vous explique tout : méthode, étapes, pièges à éviter et meilleurs outils.",
     content: `## Pourquoi apprendre le Coran en ligne quand on vit en France ?
@@ -118,6 +138,7 @@ ${CTA}`,
     readingTime: 8,
     publishedAt: "2026-01-15",
     cover: coverArabeDebutant,
+    coverSrcSet: coverArabeDebutantSet,
     coverAlt: "Étudiante apprenant l'alphabet arabe sur un cahier, cours d'arabe en ligne pour débutants",
     excerpt: "Débuter l'arabe peut sembler intimidant. Voici un parcours clair, étape par étape, pour passer de zéro à la lecture fluide en quelques mois.",
     content: `## Pourquoi apprendre l'arabe en ligne ?
@@ -173,6 +194,7 @@ ${CTA}`,
     readingTime: 10,
     publishedAt: "2026-01-18",
     cover: coverTajwidRegles,
+    coverSrcSet: coverTajwidReglesSet,
     coverAlt: "Mushaf ouvert avec annotations de tajwid, règles essentielles de la récitation du Coran",
     excerpt: "Le tajwid n'est pas un luxe : c'est une obligation pour préserver la parole d'Allah. Voici les règles fondamentales expliquées clairement.",
     content: `## Qu'est-ce que le tajwid ?
@@ -236,6 +258,7 @@ ${CTA}`,
     readingTime: 11,
     publishedAt: "2026-01-22",
     cover: coverHifz,
+    coverSrcSet: coverHifzSet,
     coverAlt: "Élève en train de mémoriser le Coran (hifz) face à un mushaf, apprentissage en ligne",
     excerpt: "Mémoriser le Coran est l'une des œuvres les plus nobles. Voici la méthode complète pour y parvenir, même en travaillant ou en étudiant.",
     content: `## Le mérite de la mémorisation du Coran
@@ -298,6 +321,7 @@ ${CTA}`,
     readingTime: 8,
     publishedAt: "2026-01-25",
     cover: coverCoranEnfants,
+    coverSrcSet: coverCoranEnfantsSet,
     coverAlt: "Jeune enfant musulman lisant le Coran, cours de Coran en ligne pour enfants",
     excerpt: "Donner à votre enfant un lien fort avec le Coran dès le plus jeune âge est l'un des plus beaux héritages que vous puissiez lui offrir.",
     content: `## À quel âge commencer ?
@@ -356,6 +380,7 @@ ${CTA}`,
     readingTime: 9,
     publishedAt: "2026-01-28",
     cover: coverTalabAlIlm,
+    coverSrcSet: coverTalabAlIlmSet,
     coverAlt: "Étudiant prenant des notes devant des livres de sciences islamiques, talab al-'ilm",
     excerpt: "Chercher la science religieuse n'est pas réservé aux savants. C'est une obligation pour tout musulman. Découvrez comment commencer correctement.",
     content: `## Qu'est-ce que talab al-'ilm ?
@@ -409,6 +434,7 @@ ${CTA}`,
     readingTime: 9,
     publishedAt: "2026-02-01",
     cover: coverArabeCoranique,
+    coverSrcSet: coverArabeCoraniqueSet,
     coverAlt: "Page de Coran en arabe avec stylo, apprentissage de l'arabe coranique pour comprendre le Coran",
     excerpt: "Lire le Coran sans le comprendre est une grande perte. Voici comment combler ce fossé en quelques mois d'efforts ciblés.",
     content: `## Pourquoi l'arabe coranique mérite une approche spécifique
@@ -456,6 +482,7 @@ ${CTA}`,
     readingTime: 7,
     publishedAt: "2026-02-04",
     cover: coverTajwidDebutant,
+    coverSrcSet: coverTajwidDebutantSet,
     coverAlt: "Frère récitant le Coran, premières règles de tajwid pour débutants",
     excerpt: "Vous savez à peine lire l'arabe et vous voulez bien prononcer le Coran ? Voici la feuille de route claire pour le tajwid débutant.",
     content: `## Étape 1 : maîtriser parfaitement la lecture
@@ -507,6 +534,7 @@ ${CTA}`,
     readingTime: 7,
     publishedAt: "2026-02-08",
     cover: coverCoranBelgique,
+    coverSrcSet: coverCoranBelgiqueSet,
     coverAlt: "Mushaf et tasbih symbolisant les cours de Coran en ligne en Belgique",
     excerpt: "Vous vivez à Bruxelles, Anvers, Liège ou ailleurs en Belgique et cherchez un enseignement sérieux du Coran ? Voici votre solution.",
     content: `## Le défi de l'apprentissage du Coran en Belgique
@@ -556,6 +584,7 @@ ${CTA}`,
     readingTime: 7,
     publishedAt: "2026-02-11",
     cover: coverCoranSuisse,
+    coverSrcSet: coverCoranSuisseSet,
     coverAlt: "Coran ouvert évoquant les cours de Coran en ligne en Suisse (Genève, Lausanne, Zurich)",
     excerpt: "Que vous viviez à Genève, Lausanne, Zurich, Bâle ou Fribourg, accédez à un enseignement coranique francophone de qualité, sans déplacement.",
     content: `## La Suisse francophone et l'apprentissage religieux
@@ -595,6 +624,7 @@ ${CTA}`,
     readingTime: 8,
     publishedAt: "2026-02-14",
     cover: coverPrononciation,
+    coverSrcSet: coverPrononciationSet,
     coverAlt: "Lèvres et lettres arabes stylisées illustrant la bonne prononciation (makharij) pour la récitation",
     excerpt: "Les francophones rencontrent des difficultés spécifiques avec certaines lettres arabes. Voici comment les surmonter méthodiquement.",
     content: `## Les lettres les plus difficiles pour un francophone
@@ -639,6 +669,7 @@ ${CTA}`,
     readingTime: 8,
     publishedAt: "2026-02-17",
     cover: coverEtudierTravaillant,
+    coverSrcSet: coverEtudierTravaillantSet,
     coverAlt: "Mushaf posé à côté d'un ordinateur portable, étudier le Coran tout en travaillant",
     excerpt: "Vous travaillez 40 heures par semaine et pensez que c'est impossible d'étudier sérieusement la religion ? Voici la méthode des adultes qui réussissent.",
     content: `## Le mythe du "je n'ai pas le temps"
@@ -684,6 +715,7 @@ ${CTA}`,
     readingTime: 9,
     publishedAt: "2026-02-20",
     cover: coverFiqhPriere,
+    coverSrcSet: coverFiqhPriereSet,
     coverAlt: "Tapis de prière et Coran, fiqh de la prière et bases essentielles",
     excerpt: "La prière est le pilier de la religion. Connaître ses règles est une obligation pour chaque musulman. Voici les bases incontournables.",
     content: `## L'importance du fiqh de la prière
@@ -747,6 +779,7 @@ ${CTA}`,
     readingTime: 9,
     publishedAt: "2026-02-23",
     cover: coverAqida,
+    coverSrcSet: coverAqidaSet,
     coverAlt: "Livres de sciences islamiques empilés, introduction à l'aqida des pieux prédécesseurs",
     excerpt: "L'aqida (croyance) est la fondation de toute la religion. Découvrez la voie claire des pieux prédécesseurs, sans détours et sans innovations.",
     content: `## Qu'est-ce que l'aqida ?
@@ -796,6 +829,7 @@ ${CTA}`,
     readingTime: 7,
     publishedAt: "2026-02-26",
     cover: coverSouratesCourtes,
+    coverSrcSet: coverSouratesCourtesSet,
     coverAlt: "Juz 'amma ouvert sur les sourates courtes à mémoriser en priorité",
     excerpt: "Pour prier en variant ses récitations, mémoriser le juz 'amma est la priorité absolue. Voici l'ordre conseillé et les mérites de chaque sourate.",
     content: `## Pourquoi commencer par le juz 'amma ?
@@ -841,6 +875,7 @@ ${CTA}`,
     readingTime: 9,
     publishedAt: "2026-03-02",
     cover: coverMeilleurApprend,
+    coverSrcSet: coverMeilleurApprendSet,
     coverAlt: "Enseignant lisant le Coran à un élève, hadith « le meilleur d'entre vous est celui qui apprend le Coran et l'enseigne »",
     excerpt: "Le Prophète ﷺ a placé l'apprentissage du Coran au sommet des actes. Pourquoi cette priorité ? Et que dit-elle de notre époque où chacun parle sans avoir appris ?",
     content: `## Le hadith fondateur
@@ -941,6 +976,7 @@ ${CTA}`,
     readingTime: 8,
     publishedAt: "2026-05-04",
     cover: coverInvocations,
+    coverSrcSet: coverInvocationsSet,
     coverAlt: "Mains levées en invocation à l'aube, importance des adhkar du matin et du soir",
     excerpt: "Le musulman a besoin de l'invocation à chaque instant. Découvrez pourquoi les adhkâr du matin et du soir sont une porte ouverte vers le Paradis — et téléchargez gratuitement notre livret PDF complet.",
     content: `## Le besoin permanent du musulman pour l'invocation
@@ -1025,6 +1061,7 @@ ${CTA}`,
     readingTime: 11,
     publishedAt: "2026-05-04",
     cover: coverTajweedPdf,
+    coverSrcSet: coverTajweedPdfSet,
     coverAlt: "Document PDF des règles du tajweed posé à côté d'un Coran, guide complet gratuit",
     excerpt: "Le Tajweed n'est pas un ornement : c'est la science qui préserve la Parole d'Allah de toute déformation. Voici les règles essentielles, et notre PDF complet à télécharger gratuitement.",
     content: `## Qu'est-ce que le Tajweed ?

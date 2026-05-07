@@ -45,30 +45,64 @@ const BlogPost = () => {
     // JSON-LD BlogPosting
     const existing = document.getElementById("ld-blogpost");
     if (existing) existing.remove();
+    const existingBc = document.getElementById("ld-blogpost-breadcrumb");
+    if (existingBc) existingBc.remove();
+
+    const origin = "https://daarualqurane.com";
+    const imageUrl = `${origin}${post.cover}`;
+    const url = `${origin}/blog/${post.slug}`;
+    const wordCount = post.content.split(/\s+/).filter(Boolean).length;
+
     const script = document.createElement("script");
     script.id = "ld-blogpost";
     script.type = "application/ld+json";
     script.text = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "BlogPosting",
+      "@id": url,
       headline: post.title,
+      name: post.title,
       description: post.description,
       keywords: post.keywords.join(", "),
+      articleSection: post.category,
       datePublished: post.publishedAt,
-      inLanguage: "fr",
-      author: { "@type": "Organization", name: "Daaru Al Qurane" },
+      dateModified: post.publishedAt,
+      inLanguage: "fr-FR",
+      wordCount,
+      image: [imageUrl],
+      url,
+      author: {
+        "@type": "Organization",
+        name: "Daaru Al Qurane",
+        url: origin,
+      },
       publisher: {
         "@type": "Organization",
         name: "Daaru Al Qurane",
-        logo: { "@type": "ImageObject", url: "https://daarualqurane.com/favicon.png" },
+        url: origin,
+        logo: { "@type": "ImageObject", url: `${origin}/favicon.png` },
       },
-      mainEntityOfPage: `https://daarualqurane.com/blog/${post.slug}`,
+      mainEntityOfPage: { "@type": "WebPage", "@id": url },
     });
     document.head.appendChild(script);
 
+    const bc = document.createElement("script");
+    bc.id = "ld-blogpost-breadcrumb";
+    bc.type = "application/ld+json";
+    bc.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Accueil", item: origin },
+        { "@type": "ListItem", position: 2, name: "Blog", item: `${origin}/blog` },
+        { "@type": "ListItem", position: 3, name: post.title, item: url },
+      ],
+    });
+    document.head.appendChild(bc);
+
     return () => {
-      const s = document.getElementById("ld-blogpost");
-      if (s) s.remove();
+      document.getElementById("ld-blogpost")?.remove();
+      document.getElementById("ld-blogpost-breadcrumb")?.remove();
     };
   }, [post]);
 
@@ -84,7 +118,17 @@ const BlogPost = () => {
         {/* Hero */}
         <div className="relative">
           <div className="absolute inset-0 h-[60vh]">
-            <img src={post.cover} alt={post.coverAlt || post.title} className="w-full h-full object-cover opacity-30" />
+            <img
+              src={post.cover}
+              srcSet={post.coverSrcSet}
+              sizes="100vw"
+              alt={post.coverAlt || post.title}
+              fetchPriority="high"
+              decoding="async"
+              width={1600}
+              height={900}
+              className="w-full h-full object-cover opacity-30"
+            />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/80 to-background" />
           </div>
 
@@ -190,8 +234,13 @@ const BlogPost = () => {
                   <div className="aspect-[16/10] overflow-hidden">
                     <img
                       src={r.cover}
+                      srcSet={r.coverSrcSet}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       alt={r.coverAlt || r.title}
                       loading="lazy"
+                      decoding="async"
+                      width={1200}
+                      height={750}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
